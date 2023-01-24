@@ -1,0 +1,10 @@
+README.md
+setup.py
+turicreate_cross_validation/__init__.py
+turicreate_cross_validation/__version__.py
+turicreate_cross_validation/cross_validation.py
+turicreate_cross_validation.egg-info/PKG-INFO
+turicreate_cross_validation.egg-info/SOURCES.txt
+turicreate_cross_validation.egg-info/dependency_links.txt
+turicreate_cross_validation.egg-info/requires.txt
+turicreate_cross_validation.egg-info/top_level.txt
