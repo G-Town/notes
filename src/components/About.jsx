@@ -18,57 +18,13 @@ class About extends Component {
     };
     return (
       <>
-        <Parallax
-          blur={{ min: 0, max: 5 }}
-          strength={150}
-        // renderLayer={percentage => (
-        //   <div>
-        //     <div
-        //       style={{
-        //         position: "absolute",
-        //         background: `white`,
-        //         left: "50%",
-        //         top: "50%",
-        //         borderRadius: "50%",
-        //         transform: "translate(-50%,-50%)",
-        //         width: percentage * 500,
-        //         height: percentage * 500,
-        //       }}
-        //     />
-        //   </div>
-        // )}
-        >
-          <Background className="bg-about-image text-white">
-          <div className="container" style={insideStyles}>
-            <div className="row">
-              <h1>about</h1>
-            </div>
-            <div className="row mt-5">
-              <p>This is a React v6 app built with routed components and reactstrap classes. It is hosted on Git Pages 
-                as a static website which supports a read-only datastore. Thus, server-side data manipulation is not 
-                included. (Details and workaround included here: https://stackoverflow.com/a/48025760/20226933)
-                <br />Instead this React app serves as a testing ground for building components and customizing styles 
-                that can be used in fully deployed apps.</p>
-            </div>
-          </div>
-          </Background>
-
-          <div style={{ height: 800 }} className="row align-items-center">
-            {/* <div className="col">
-              <h2>about</h2>
-              <main>
-                <p>This is a React v6 app built with routed components and reactstrap classes.</p>
-              </main>
-            </div> */}
-          </div>
-
-        </Parallax>
-        <div className="bg-about pb-5">
+        
+        <div className="bg-home pb-5">
           <div className="container text-black pb-4">
             <div className="row">
               <Breadcrumb>
                 <BreadcrumbItem><NavLink to="/home" className="App-link">Home</NavLink></BreadcrumbItem>
-                <BreadcrumbItem>Page 2</BreadcrumbItem>
+                <BreadcrumbItem>About</BreadcrumbItem>
               </Breadcrumb>
             </div>
           </div>

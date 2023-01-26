@@ -3,27 +3,21 @@ import React, { Component } from 'react';
 import {
   Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Breadcrumb, BreadcrumbItem, Collapse, Button
 } from 'reactstrap';
-import { FadeTransform } from 'react-animation-components';
+// import { FadeTransform } from 'react-animation-components';
 import { NavLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom/dist';
 
 function RenderCard({ notebook }) {
   return (
-    <FadeTransform
-      in
-      transformProps={{
-        exitTransform: 'scale(0.5) translateY(-50%)'
-      }}>
-      <Card style={{ width: '15rem' }} className="bg-dark">
-        <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1647814222305.jpg"} alt={notebook.module} />
-        <CardBody className="text-light">
-          <CardTitle>{notebook.title}</CardTitle>
-          <CardSubtitle></CardSubtitle>
-          <CardText></CardText>
-          <NavLink to={`/MachineLearning-UWash/${notebook.id}`} className="stretched-link"></NavLink>
-        </CardBody>
-      </Card>
-    </FadeTransform>
+    <Card style={{ width: '15rem' }} className="bg-dark">
+      <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1647814222305.jpg"} alt={notebook.module} />
+      <CardBody className="text-light">
+        <CardTitle>{notebook.title}</CardTitle>
+        <CardSubtitle></CardSubtitle>
+        <CardText></CardText>
+        <NavLink to={`/MachineLearning-UWash/${notebook.id}`} className="stretched-link"></NavLink>
+      </CardBody>
+    </Card>
   );
 }
 
@@ -65,18 +59,18 @@ class MachineLearning extends Component {
   }
   render() {
     return (
-      <div className="bg-home pb-5">
-        <div className="col-2 bar mb-4">
-          <Breadcrumb className="mx-5">
+      <div className="bg-home pb-5 ">
+        <div className="container mb-4">
+          <Breadcrumb className="">
             <BreadcrumbItem><NavLink to="/home" className="App-link">Home</NavLink></BreadcrumbItem>
             <BreadcrumbItem>MachineLearning</BreadcrumbItem>
           </Breadcrumb>
         </div>
         <div className="container-fluid text-white p-5 box">
-          <h2>Machine Learning Specialization - University of Washington</h2>
+          <h3>Machine Learning Specialization - University of Washington</h3>
           <br /><hr /><div className="row p-5">
             <div className="col px-5">
-              <h3>Foundations: A Case Study Approach</h3><br />
+              <h4>Foundations: A Case Study Approach</h4><br />
               <p>In this course, you will get hands-on experience with machine learning from a series of practical
                 case-studies.  At the end of the first course you will have studied how to predict house prices based on
                 house-level features, analyze sentiment from user reviews, retrieve documents of interest, recommend
@@ -134,7 +128,7 @@ class MachineLearning extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Regression</h3><br />
+              <h4>Regression</h4><br />
               <p>In our first case study, predicting house prices, you will create models that predict a continuous value
                 (price) from input features (square footage, number of bedrooms and bathrooms,...).  This is just one of
                 the many places where regression can be applied.  Other applications range from predicting health
@@ -209,7 +203,7 @@ class MachineLearning extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Classification</h3><br />
+              <h4>Classification</h4><br />
               <p>In our case study on analyzing sentiment, you will create models that predict a class (positive/negative
                 sentiment) from input features (text of the reviews, user profile information,...).  In our second case
                 study for this course, loan default prediction, you will tackle financial data, and predict when a loan is
@@ -299,7 +293,7 @@ class MachineLearning extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Clustering & Retrieval</h3><br />
+              <h4>Clustering & Retrieval</h4><br />
               <p>A reader is interested in a specific news article and you want to find similar articles to recommend.
                 What is the right notion of similarity?  Moreover, what if there are millions of other documents?  Each
                 time you want to a retrieve a new document, do you need to search through all other documents?  How do

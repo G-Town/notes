@@ -3,27 +3,21 @@ import React, { Component } from 'react';
 import {
   Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Breadcrumb, BreadcrumbItem, Collapse, Button
 } from 'reactstrap';
-import { FadeTransform } from 'react-animation-components';
+// import { FadeTransform } from 'react-animation-components';
 import { NavLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom/dist';
 
 function RenderCard({ notebook }) {
   return (
-    <FadeTransform
-      in
-      transformProps={{
-        exitTransform: 'scale(0.5) translateY(-50%)'
-      }}>
-      <Card style={{ width: '15rem' }} className="bg-dark">
-        <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1648273561855.jpg"} alt={notebook.module} />
-        <CardBody className="text-light">
-          <CardTitle>{notebook.title}</CardTitle>
-          <CardSubtitle></CardSubtitle>
-          <CardText></CardText>
-          <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
-        </CardBody>
-      </Card>
-    </FadeTransform>
+    <Card style={{ width: '15rem' }} className="bg-dark">
+      <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1648273561855.jpg"} alt={notebook.module} />
+      <CardBody className="text-light">
+        <CardTitle>{notebook.title}</CardTitle>
+        <CardSubtitle></CardSubtitle>
+        <CardText></CardText>
+        <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
+      </CardBody>
+    </Card>
   );
 }
 
@@ -71,18 +65,18 @@ class DataSci extends Component {
 
   render() {
     return (
-      <div className="bg-home pb-5">
-        <div className="col-2 bar mb-4">
+      <div className="bg-home pb-5 ">
+        <div className="container mb-4">
           <Breadcrumb className="mx-5">
             <BreadcrumbItem><NavLink to="/home" className="App-link">Home</NavLink></BreadcrumbItem>
             <BreadcrumbItem>DataSci</BreadcrumbItem>
           </Breadcrumb>
         </div>
         <div className="container-fluid text-white p-5 box">
-          <h2>Applied Data Science Specialization - University of Michigan</h2>
+          <h3>Applied Data Science Specialization - University of Michigan</h3>
           <br /><hr /><div className="row p-5">
             <div className="col px-5">
-              <h3>Introduction to Data Science</h3><br />
+              <h4>Introduction to Data Science</h4><br />
               <p>This course will introduce the learner to the basics of the python programming environment, including
                 fundamental python programming techniques such as lambdas, reading and manipulating csv files, and the
                 numpy library. The course will introduce data manipulation and cleaning techniques using the popular
@@ -175,7 +169,7 @@ class DataSci extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Applied Plotting, Charting & Data Representation</h3><br />
+              <h4>Applied Plotting, Charting & Data Representation</h4><br />
               <p>This course will introduce the learner to information visualization basics, with a focus on reporting
                 and charting using the matplotlib library. The course will start with a design and information
                 literacy perspective, touching on what makes a good and bad visualization, and what statistical
@@ -233,7 +227,7 @@ class DataSci extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Applied Machine Learning</h3><br />
+              <h4>Applied Machine Learning</h4><br />
               <p>This course will introduce the learner to applied machine learning, focusing more on the techniques
                 and methods than on the statistics behind these methods. The course will start with a discussion of how
                 machine learning is different than descriptive statistics, and introduce the scikit learn toolkit
@@ -295,7 +289,7 @@ class DataSci extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Applied Text Mining</h3><br />
+              <h4>Applied Text Mining</h4><br />
               <p>This course will introduce the learner to text mining and text manipulation basics. The course begins
                 with an understanding of how text is handled by python, the structure of text both to the machine and
                 to humans, and an overview of the nltk framework for manipulating text. The second week focuses on
@@ -350,7 +344,7 @@ class DataSci extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Applied Social Network Analysis</h3><br />
+              <h4>Applied Social Network Analysis</h4><br />
               <p>This course will introduce the learner to network analysis through tutorials using the NetworkX
                 library. The course begins with an understanding of what network analysis is and motivations for why we
                 might model phenomena as networks. The second week introduces the concept of connectivity and network

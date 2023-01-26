@@ -6,15 +6,8 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p {
+  font-size: 15px;
 }
 
 .App-header {
@@ -32,18 +25,8 @@
   color: #00ffae;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .shared-icon {
-  font-size: x-large;
+  font-size: large;
 
 }
 
@@ -58,6 +41,21 @@
 
 .bar {
   background: rgba(255, 255, 255, 0.15);
+}
+
+.bg-home {
+  background: linear-gradient(170deg, rgba(228, 37, 81, 0.700), rgba(255, 0, 0, 0) 70%),
+    linear-gradient(270deg, rgba(0, 146, 183, 0.943), rgba(0, 0, 255, 0) 120%),
+    linear-gradient(5deg, rgba(243, 243, 1, 0.737), rgba(0, 255, 0, 0) 150%);
+}
+
+.bg-home-image {
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.0)), url('../public/images/59bsn5hgnojy.jpg');
+  background-position: center -220px;
+  background-repeat: repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
 }
 
 .featureCarousel {
@@ -123,93 +121,4 @@
   content: '<';
   font-size: 55px;
   color: white;
-}
-
-.bg-home {
-  background: linear-gradient(170deg, rgba(228, 37, 81, 0.700), rgba(255, 0, 0, 0) 70%),
-    linear-gradient(270deg, rgba(0, 146, 183, 0.943), rgba(0, 0, 255, 0) 120%),
-    linear-gradient(5deg, rgba(243, 243, 1, 0.737), rgba(0, 255, 0, 0) 150%);
-}
-
-.bg-about {
-  background: linear-gradient(to top, rgb(0, 0, 0), rgb(99, 99, 99) 20%, rgba(176, 176, 176, 0.989) 75%, rgba(51, 51, 51, 0.904) 85%);
-  opacity: 0.9;
-}
-
-.bg-page1 {
-  background: linear-gradient(#a52e54df, #3f0285c5);
-  opacity: 0.9;
-}
-
-.bg-page2 {
-  background: linear-gradient(45deg, #0780c6, #000c1dea);
-  opacity: 0.9;
-}
-
-.bg-page3 {
-  background: linear-gradient(150deg, rgb(0, 98, 16), rgba(0, 123, 255, 0.196) 70.71%),
-    linear-gradient(230deg, rgba(7, 96, 62, 0.925), rgba(0, 255, 0, 0.135) 70.71%),
-    linear-gradient(360deg, rgba(135, 213, 1, 0.969), rgba(0, 0, 255, 0.213) 70.71%);
-  opacity: 0.9;
-}
-
-.bg-home-image {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.0)), url('../public/images/59bsn5hgnojy.jpg');
-  background-position: center -300px;
-  background-repeat: repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-}
-
-.bg-list-image {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1)), url('../public/images/1646507003107.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  opacity: 1;
-}
-
-.bg-page1-image {
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15)), url('../public/images/1644273845427.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  opacity: 1;
-}
-
-.bg-page2-image {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)), url('../public/images/673465-2204554309.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 35% 105%;
-  width: 100vw;
-  height: 100vh;
-  opacity: 1;
-}
-
-.bg-page3-image {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)), url('../public/images/1661285400630843.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 120%;
-  width: 100vw;
-  height: 100vh;
-  opacity: 1;
-}
-
-.bg-about-image {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)), url('../public/images/1535235514234.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  opacity: 1;
 }

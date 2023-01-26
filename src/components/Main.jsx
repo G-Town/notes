@@ -15,6 +15,7 @@ import Footer from './Footer';
 // import Sidebar from './Sidebar';
 import Notebook from './Notebook';
 import IFrame from './IFrame';
+import { BsMarkdown } from 'react-icons/bs';
 
 const mapStateToProps = state => {
   return {
@@ -79,6 +80,11 @@ function Main(props) {
         crumb={["/ApplDataSci-UMich", "DataSci"]}
       />);
   }
+  // const WDHKPage = () => {
+  //   return (
+      
+  //   );
+  // }
 
   return (
     <div className="font-link">

@@ -2,26 +2,20 @@ import React, { Component } from 'react';
 import {
   Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Breadcrumb, BreadcrumbItem, Collapse, Button
 } from 'reactstrap';
-import { FadeTransform } from 'react-animation-components';
+// import { FadeTransform } from 'react-animation-components';
 import { NavLink } from 'react-router-dom';
 
 function RenderCard({ notebook }) {
   return (
-    <FadeTransform
-      in
-      transformProps={{
-        exitTransform: 'scale(0.5) translateY(-50%)'
-      }}>
-      <Card style={{ width: '15rem' }} className="bg-dark">
-        <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1648273561855.jpg"} alt={notebook.module} />
-        <CardBody className="text-light">
-          <CardTitle>{notebook.title}</CardTitle>
-          <CardSubtitle></CardSubtitle>
-          <CardText></CardText>
-          <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
-        </CardBody>
-      </Card>
-    </FadeTransform>
+    <Card style={{ width: '15rem' }} className="bg-dark">
+      <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1648273561855.jpg"} alt={notebook.module} />
+      <CardBody className="text-light">
+        <CardTitle>{notebook.title}</CardTitle>
+        <CardSubtitle></CardSubtitle>
+        <CardText></CardText>
+        <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
+      </CardBody>
+    </Card>
   );
 }
 
@@ -62,18 +56,18 @@ class WebDev extends Component {
 
   render() {
     return (
-      <div className="bg-home pb-5">
-        <div className="col-2 bar mb-4">
+      <div className="bg-home pb-5 ">
+        <div className="container mb-4">
           <Breadcrumb className="mx-4">
             <BreadcrumbItem><NavLink to="/home" className="App-link">Home</NavLink></BreadcrumbItem>
-            <BreadcrumbItem>MachineLearning</BreadcrumbItem>
+            <BreadcrumbItem>WebDev</BreadcrumbItem>
           </Breadcrumb>
         </div>
         <div className="container-fluid text-white p-5 box">
-          <h2>Full-Stack Web Development - Hong Kong University of Science and Tech</h2>
+          <h3>Full-Stack Web Development - Hong Kong University of Science and Tech</h3>
           <br /><hr /><div className="row p-5">
             <div className="col px-5">
-              <h3>Front-End Web UI Frameworks and Tools: Bootstrap 4</h3><br />
+              <h4>Front-End Web UI Frameworks and Tools: Bootstrap 4</h4><br />
               <p>In this course, you will get hands-on experience with machine learning from a series of practical
                 case-studies.  At the end of the first course you will have studied how to predict house prices based on
                 house-level features, analyze sentiment from user reviews, retrieve documents of interest, recommend
@@ -103,7 +97,7 @@ class WebDev extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Front-End Web Development with React</h3><br />
+              <h4>Front-End Web Development with React</h4><br />
               <p>In our first case study, predicting house prices, you will create models that predict a continuous value
                 (price) from input features (square footage, number of bedrooms and bathrooms,...).  This is just one of
                 the many places where regression can be applied.  Other applications range from predicting health
@@ -133,7 +127,7 @@ class WebDev extends Component {
           </Collapse>
           <hr /><div className="row p-5">
             <div className="col-12 col-md px-5">
-              <h3>Server-side Development with NodeJS, Express and MongoDB</h3><br />
+              <h4>Server-side Development with NodeJS, Express and MongoDB</h4><br />
               <p>In our case study on analyzing sentiment, you will create models that predict a class (positive/negative
                 sentiment) from input features (text of the reviews, user profile information,...).  In our second case
                 study for this course, loan default prediction, you will tackle financial data, and predict when a loan is

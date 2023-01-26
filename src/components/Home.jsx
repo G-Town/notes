@@ -1,28 +1,22 @@
 import '../App.css';
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, CardGroup } from 'reactstrap';
-import { FadeTransform } from 'react-animation-components';
+// import { FadeTransform } from 'react-animation-components';
 import { NavLink } from 'react-router-dom';
 import { render } from "react-dom";
 
 
 function RenderCard({ item, page }) {
   return (
-    <FadeTransform
-      in
-      transformProps={{
-        exitTransform: 'scale(0.5) translateY(-50%)'
-      }}>
-      <Card style={{ width: '15rem' }} className="bg-dark">
-        <CardImg height="220" src={item.image} alt={item.name} />
-        <CardBody className="text-light">
-          <CardTitle><h5>{item.name}</h5></CardTitle>
-          {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
-          <CardText>{item.description}</CardText>
-          <NavLink to={page} className="nav-link stretched-link"></NavLink>
-        </CardBody>
-      </Card>
-    </FadeTransform>
+    <Card style={{ width: '14rem' }} className="bg-dark">
+      <CardImg height="200" src={item.image} alt={item.name} />
+      <CardBody className="text-light">
+        <CardTitle>{item.name}</CardTitle>
+        {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
+        <CardText>{item.description}</CardText>
+        <NavLink to={page} className="nav-link stretched-link"></NavLink>
+      </CardBody>
+    </Card>
   );
 }
 
@@ -31,7 +25,7 @@ function Home(props) {
     <>
       <div className="bg-home p-5">
         <div className="container-fluid text-white box p-5">
-          <h2>Welcome to Gerry Arriaga's Website</h2>
+          <h3>Welcome to Gerry Arriaga's Website</h3>
           <div className="row">
             <div className="col-12 col-md px-5">
               <p>
