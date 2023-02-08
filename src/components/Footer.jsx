@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   FaHome, FaInfo, FaList, FaLinkedinIn,
-  FaEnvelope, FaGithub,FaCodepen
+  FaEnvelope, FaGithub, FaCodepen
 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
@@ -31,10 +31,10 @@ function Footer(props) {
           </div>
           <div className="col-7 col-sm-5">
             <h5>Contact</h5>
-            <address>
+            <p>
               <FaEnvelope /> : <a href="mailto:gerryarriagajr@gmail.com" className="App-link">gerryarriagajr@gmail</a>
-            </address>
-            © 2023
+            </p>
+            <p>© 2023</p>
           </div>
           <div className="col-12 col-sm-4 align-self-center">
             <h5>Links</h5>

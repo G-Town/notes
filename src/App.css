@@ -10,6 +10,19 @@ p {
   font-size: 15px;
 }
 
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 80vh;
+  max-width: 40vw;
+}
+
+/* .collapse { 
+  display: flex;
+  flex-direction: column-reverse;
+} */
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -22,7 +35,7 @@ p {
 }
 
 .App-link {
-  color: #00ffae;
+  color: #7f02b9;
 }
 
 .shared-icon {
@@ -35,7 +48,7 @@ p {
 }
 
 .box {
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0, 0, 0, 0.20);
   width: 80vw;
 }
 
@@ -44,18 +57,26 @@ p {
 }
 
 .bg-home {
-  background: linear-gradient(170deg, rgba(228, 37, 81, 0.700), rgba(255, 0, 0, 0) 70%),
-    linear-gradient(270deg, rgba(0, 146, 183, 0.943), rgba(0, 0, 255, 0) 120%),
-    linear-gradient(5deg, rgba(243, 243, 1, 0.737), rgba(0, 255, 0, 0) 150%);
+  background: linear-gradient(170deg, rgba(222, 74, 108, 0.853), rgba(210, 49, 87, 0.1) 70%),
+    linear-gradient(215deg, rgb(0, 162, 255), rgba(16, 127, 192, 0.15) 75%),
+    linear-gradient(265deg, rgb(16, 127, 192), rgba(16, 127, 192, 0.05) 60%),
+    linear-gradient(5deg, rgba(144, 234, 48, 0.868), rgba(130, 235, 17) 100%);
 }
 
 .bg-home-image {
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.0)), url('../public/images/59bsn5hgnojy.jpg');
-  background-position: center -220px;
-  background-repeat: repeat;
+  background-position: center -280px;
+  /* background-repeat: repeat; */
   background-size: cover;
+  background-attachment: fixed;
   width: 100vw;
   height: 100vh;
+}
+
+@media (max-width: 770px) {
+  .bg-home-image {
+    background-position: center -180px;
+  }
 }
 
 .featureCarousel {

@@ -14,14 +14,15 @@ import WebDev from './WebDev'
 import Footer from './Footer';
 // import Sidebar from './Sidebar';
 import Notebook from './Notebook';
+import Page from './Page'
 import IFrame from './IFrame';
 import { BsMarkdown } from 'react-icons/bs';
 
 const mapStateToProps = state => {
   return {
-    reditems: state.DSUMnotebooks,
-    blueitems: state.MLUWnotebooks,
-    greenitems: state.WDHKpages
+    DSUMnotebooks: state.DSUMnotebooks,
+    MLUWnotebooks: state.MLUWnotebooks,
+    WDHKpages: state.WDHKpages
   }
 }
 
@@ -29,62 +30,74 @@ function Main(props) {
   const HomePage = () => {
     return (
       <Home
+        reditem={{
+          name: 'Applied Data Science Specialization',
+          image: process.env.PUBLIC_URL + '/images/red.avif',
+          description: ''
+        }}
         blueitem={{
           name: 'Machine Learning Specialization',
           image: process.env.PUBLIC_URL + '/images/gears.jpg',
           description: ''
         }}
-        reditem={{
-          name: 'Applied Data Science Specialization',
-          image: process.env.PUBLIC_URL + '/images/python_datascience_thumbnail.png',
-          description: ''
-        }}
         greenitem={{
           name: 'Full-Stack Web Development Specialization',
-          image: process.env.PUBLIC_URL + '/images/mern.png',
+          image: process.env.PUBLIC_URL + '/images/mern3.jpg',
           description: ''
         }}
       />
     );
   }
 
-  const MachineLearningNotes = () => {
-    return (
-      <MachineLearning notebooks={props.blueitems} />
-    );
-  }
   const DataSciNotes = () => {
     return (
-      <DataSci notebooks={props.reditems} />
+      <DataSci notebooks={props.DSUMnotebooks} />
+    );
+  }
+  const MachineLearningNotes = () => {
+    return (
+      <MachineLearning notebooks={props.MLUWnotebooks} />
     );
   }
   const WebDevNotes = () => {
     return (
-      <WebDev pages={props.greenitems} />
+      <WebDev pages={props.WDHKpages} />
     );
   }
 
-  const MLUWNotebook = () => {
-    return (
-      <Notebook
-        frames={props.blueitems}
-        id={parseInt(useParams().notebookId, 10)}
-        crumb={["/MachineLearning-UWash", "MachineLearning"]}
-      />);
-  }
   const DSUMNotebook = () => {
     return (
       <Notebook
-        frames={props.blueitems}
+        frames={props.DSUMnotebooks}
         id={parseInt(useParams().notebookId, 10)}
         crumb={["/ApplDataSci-UMich", "DataSci"]}
       />);
   }
-  // const WDHKPage = () => {
-  //   return (
-      
-  //   );
-  // }
+  const MLUWNotebook = () => {
+    return (
+      <Notebook
+        frames={props.MLUWnotebooks}
+        id={parseInt(useParams().notebookId, 10)}
+        crumb={["/MachineLearning-UWash", "MachineLearning"]}
+      />);
+  }
+  const WDHKPage = () => {
+    return (
+      <Page
+        frames={props.WDHKpages}
+        id={parseInt(useParams().pageId, 10)}
+        crumb={["/FSWebDev-HKST", "WebDev"]}
+      />);
+  }
+  const WDHKNotebook = () => {
+    return (
+      <Notebook
+        frames={props.WDHKpages}
+        id={parseInt(useParams().pageId, 10)}
+        crumb={["/FSWebDev-HKST", "WebDev"]}
+      />
+    );
+  }
 
   return (
     <div className="font-link">
@@ -102,6 +115,9 @@ function Main(props) {
         <Route path="MachineLearning-UWash/:notebookId" element={<MLUWNotebook />} />
 
         <Route path="/FSWebDev-HKST" element={<WebDevNotes />} />
+        <Route path="FSWebDev-HKST/:pageId" element={<WDHKPage />} />
+        <Route path="FSWebDev-HKST/file/:pageId" element={<WDHKNotebook />} />
+        
 
         <Route path="/" element={<Navigate replace to="/home" />} />
       </Routes>

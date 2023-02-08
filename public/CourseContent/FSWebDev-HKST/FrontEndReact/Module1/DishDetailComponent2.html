@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta name="viewport" content="width=device-width"><title>file:///C:/Users/gerry/apps/notes/public/CourseContent/FSWebDev-HKST/FrontEndReact/Module1/DishDetailComponent.html</title><link rel="stylesheet" type="text/css" href="resource://content-accessible/viewsource.css"></head><body id="viewsource" class="highlight" style="tab-size: 4"><pre id="line1"><span>import React, { Component } from 'react';
+<span id="line2"></span>import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+<span id="line3"></span>
+<span id="line4"></span>
+<span id="line5"></span>class DishDetail extends Component{
+<span id="line6"></span>
+<span id="line7"></span>    constructor(props){
+<span id="line8"></span>        super(props);
+<span id="line9"></span>
+<span id="line10"></span>        this.state = {            
+<span id="line11"></span>        }
+<span id="line12"></span>    }
+<span id="line13"></span>
+<span id="line14"></span>    renderDish(dish){
+<span id="line15"></span>        return(
+<span id="line16"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">className</span>="<a class="attribute-value">col-12 col-md-5 m-1</a>"&gt;</span><span>
+<span id="line17"></span>                </span><span>&lt;<span class="start-tag">Card</span>&gt;</span><span>
+<span id="line18"></span>                    </span><span>&lt;<span class="start-tag">CardImg</span> <span class="attribute-name">width</span>="<a class="attribute-value">100%</a>" <span class="attribute-name">src</span> =<a class="attribute-value" href="view-source:file:///C:/Users/gerry/apps/notes/public/CourseContent/FSWebDev-HKST/FrontEndReact/Module1/%7Bdish.image%7D">{dish.image}</a> <span class="attribute-name">alt</span> =<a class="attribute-value">{dish.name}/</a>&gt;</span><span> 
+<span id="line19"></span>                    </span><span>&lt;<span class="start-tag">CardBody</span>&gt;</span><span>
+<span id="line20"></span>                        </span><span>&lt;<span class="start-tag">CardTitle</span>&gt;</span><span>{dish.name}</span><span>&lt;/<span class="end-tag">CardTitle</span>&gt;</span><span>
+<span id="line21"></span>                        </span><span>&lt;<span class="start-tag">CardText</span>&gt;</span><span>{dish.description}</span><span>&lt;/<span class="end-tag">CardText</span>&gt;</span><span>
+<span id="line22"></span>                    </span><span>&lt;/<span class="end-tag">CardBody</span>&gt;</span><span>
+<span id="line23"></span>                </span><span class="error" title="End tag “card” seen, but there were open elements.">&lt;/<span class="end-tag">Card</span>&gt;</span><span>
+<span id="line24"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line25"></span>        )
+<span id="line26"></span>    }
+<span id="line27"></span>
+<span id="line28"></span>    renderComments(comments){
+<span id="line29"></span>        if(comments == null){
+<span id="line30"></span>            return(</span><span>&lt;<span class="start-tag">div</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>);
+<span id="line31"></span>        }
+<span id="line32"></span>        const cmnts = comments.map((comment)=&gt;{
+<span id="line33"></span>            return (
+<span id="line34"></span>                </span><span>&lt;<span class="start-tag">li</span> <span class="attribute-name">key</span>=<a class="attribute-value">{comment.id}</a>&gt;</span><span>
+<span id="line35"></span>                    </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>{comment.comment}</span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line36"></span>                    </span><span>&lt;<span class="start-tag">p</span>&gt;</span><span>
+<span id="line37"></span>                        -- {comment.author},<span class="entity"><span>&amp;</span>nbsp;</span>
+<span id="line38"></span>                        {new Intl.DateTimeFormat('en-US',{
+<span id="line39"></span>                            year:'numeric',
+<span id="line40"></span>                            month:'long',
+<span id="line41"></span>                            day:'2-digit'
+<span id="line42"></span>                        }).format(new Date(comment.date))}
+<span id="line43"></span>                    </span><span>&lt;/<span class="end-tag">p</span>&gt;</span><span>
+<span id="line44"></span>                </span><span>&lt;/<span class="end-tag">li</span>&gt;</span><span>
+<span id="line45"></span>            )
+<span id="line46"></span>        })
+<span id="line47"></span>        return(
+<span id="line48"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">className</span>='<a class="attribute-value">col-12 col-md-5 m-1</a>'&gt;</span><span>
+<span id="line49"></span>                </span><span>&lt;<span class="start-tag">h4</span>&gt;</span><span>Comments</span><span>&lt;/<span class="end-tag">h4</span>&gt;</span><span>
+<span id="line50"></span>                </span><span>&lt;<span class="start-tag">ul</span> <span class="attribute-name">className</span>='<a class="attribute-value">list-unstyled</a>'&gt;</span><span>
+<span id="line51"></span>                    {cmnts}
+<span id="line52"></span>                </span><span>&lt;/<span class="end-tag">ul</span>&gt;</span><span>
+<span id="line53"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line54"></span>        )
+<span id="line55"></span>    }
+<span id="line56"></span>
+<span id="line57"></span>    render() {
+<span id="line58"></span>        const dish = this.props.dish;
+<span id="line59"></span>        if(dish == null){
+<span id="line60"></span>            return(</span><span>&lt;<span class="start-tag">div</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>)
+<span id="line61"></span>        }
+<span id="line62"></span>        const dishItem = this.renderDish(dish)
+<span id="line63"></span>        const commentItem = this.renderComments(dish.comments)
+<span id="line64"></span>
+<span id="line65"></span>        return(
+<span id="line66"></span>            </span><span>&lt;<span class="start-tag">div</span> <span class="attribute-name">className</span>="<a class="attribute-value">row</a>"&gt;</span><span>
+<span id="line67"></span>                {dishItem}
+<span id="line68"></span>                {commentItem}
+<span id="line69"></span>            </span><span>&lt;/<span class="end-tag">div</span>&gt;</span><span>
+<span id="line70"></span>        );
+<span id="line71"></span>    }
+<span id="line72"></span>}
+<span id="line73"></span>export default DishDetail;</span></pre></body></html>

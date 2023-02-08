@@ -46,7 +46,7 @@ function Home(props) {
           <hr />
           <div className="row d-flex align-items-center justify-content-center">
             <div className="col-12 col-md-6 col-xxl-3 d-flex justify-content-center my-5">
-              <RenderCard item={props.reditem} page="/MachineLearning-UWash" />
+              <RenderCard item={props.reditem} page="/ApplDataSci-UMich" />
             </div>
             <div className="col col-8 col-md-6 col-xxl-8 d-flex justify-content-center my-5">
               <p>The courses in this University of Michigan specialization introduce learners to data science through
@@ -67,7 +67,7 @@ function Home(props) {
                 from data.</p>
             </div>
             <div className="col-12 col-md-6 col-xxl-3 d-flex justify-content-center my-5">
-              <RenderCard item={props.blueitem} page="/ApplDataSci-UMich" />
+              <RenderCard item={props.blueitem} page="/MachineLearning-UWash" />
             </div>
           </div>
           <hr />

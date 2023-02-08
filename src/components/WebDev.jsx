@@ -5,15 +5,29 @@ import {
 // import { FadeTransform } from 'react-animation-components';
 import { NavLink } from 'react-router-dom';
 
-function RenderCard({ notebook }) {
+function RenderMDCard({ page }) {
   return (
     <Card style={{ width: '15rem' }} className="bg-dark">
-      <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1648273561855.jpg"} alt={notebook.module} />
+      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1661286686270316.jpg"} alt={page.module} />
       <CardBody className="text-light">
-        <CardTitle>{notebook.title}</CardTitle>
+        <CardTitle>{page.title}</CardTitle>
         <CardSubtitle></CardSubtitle>
         <CardText></CardText>
-        <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
+        <NavLink to={`/FSWebDev-HKST/${page.id}`} className="stretched-link"></NavLink>
+      </CardBody>
+    </Card>
+  );
+}
+
+function RenderHTMLCard({ page }) {
+  return (
+    <Card style={{ width: '15rem' }} className="bg-dark">
+      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1661286686270316.jpg"} alt={page.module} />
+      <CardBody className="text-light">
+        <CardTitle>{page.title}</CardTitle>
+        <CardSubtitle></CardSubtitle>
+        <CardText></CardText>
+        <NavLink to={`/FSWebDev-HKST/file/${page.id}`} className="stretched-link"></NavLink>
       </CardBody>
     </Card>
   );
@@ -82,17 +96,84 @@ class WebDev extends Component {
           </div>
           <Button className="mb-5" onClick={this.toggleMod1}>Modules</Button>
           <Collapse isOpen={this.state.isMod1Open}>
-            <div className="row pb-5">
-              <h4>Module 1 - Welcome</h4>
+            <hr />
+            <div className="row py-5">
+              <h4>Module 1 - Front-End Web UI Frameorks Overview</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 0)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 1)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 2)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 3)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 4)} />
+              </div>
             </div>
-            <div className="row pb-5">
-              <h4>Module 2 - Regression: Predicting House Prices</h4>
+            <hr />
+            <div className="row py-5">
+              <h4>Module 2 - Bootstrap CSS Components</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 5)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 6)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 7)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 8)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 9)} />
+              </div>
             </div>
-            <div className="row pb-5">
-              <h4>Module 3 - Classification: Analyzing Sentiment</h4>
+            <hr />
+            <div className="row py-5">
+              <h4>Module 3 - Bootstrap Javascript Components</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 10)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 11)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 12)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 13)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 14)} />
+              </div>
             </div>
-            <div className="row pb-5">
-              <h4>Module 4 - Clustering and Similarity: Retrieving Documents</h4>
+            <hr />
+            <div className="row py-5">
+              <h4>Module 4 - Web Tools</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 15)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 16)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 17)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 18)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 19)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderHTMLCard page={this.props.pages.find(page => page.id === 20)} />
+              </div>
             </div>
           </Collapse>
           <hr /><div className="row p-5">
@@ -112,16 +193,29 @@ class WebDev extends Component {
           </div>
           <Button className="mb-5" onClick={this.toggleMod2}>Modules</Button>
           <Collapse isOpen={this.state.isMod2Open}>
-            <div className="row pb-5">
-              <h4>Module 1 - Simple Linear Regression</h4>
+            <hr />
+            <div className="row py-5">
+              <h4>Module 1 - Introduction to React</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 21)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 22)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 23)} />
+              </div>
             </div>
-            <div className="row pb-5">
+            <hr />
+            <div className="row py-5">
               <h4>Module 2 - Multiple Regressio</h4>
             </div>
-            <div className="row pb-5">
+            <hr />
+            <div className="row py-5">
               <h4>Module 3 - Assessing Performance</h4>
             </div>
-            <div className="row pb-5">
+            <hr />
+            <div className="row py-5">
               <h4>Module 4 - Ridge Regression</h4>
             </div>
           </Collapse>
@@ -148,16 +242,20 @@ class WebDev extends Component {
           </div>
           <Button className="mb-5" onClick={this.toggleMod3}>Modules</Button>
           <Collapse isOpen={this.state.isMod3Open}>
-            <div className="row pb-5">
+            <hr />
+            <div className="row py-5">
               <h4>Module 1 - Welcome</h4>
             </div>
-            <div className="row pb-5">
+            <hr />
+            <div className="row py-5">
               <h4>Module 2 - Linear Classifiers & Logistic Regression</h4>
             </div>
-            <div className="row pb-5">
+            <hr />
+            <div className="row py-5">
               <h4>Module 3 - Learning Linear Classifiers</h4>
             </div>
-            <div className="row pb-5">
+            <hr />
+            <div className="row py-5">
               <h4>Module 4 - Overfitting & Regularization in Logistic Regression</h4>
             </div>
           </Collapse>

@@ -10,7 +10,7 @@ import { Outlet } from 'react-router-dom/dist';
 function RenderCard({ notebook }) {
   return (
     <Card style={{ width: '15rem' }} className="bg-dark">
-      <CardImg height='180' src={process.env.PUBLIC_URL + "/images/1647814222305.jpg"} alt={notebook.module} />
+      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1673247260220927.jpg"} alt={notebook.module} />
       <CardBody className="text-light">
         <CardTitle>{notebook.title}</CardTitle>
         <CardSubtitle></CardSubtitle>

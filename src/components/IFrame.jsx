@@ -10,7 +10,7 @@ const IFrame = ({ url }) => {
 
     <div ref={divBoxRef} className=" relative text-gray-600">
       {!iFrameLoaded && (
-        <span className="inline-block">loading notebook ...</span>
+        <span className="inline-block">loading ...</span>
       )}
       <iframe
         onLoad={(e) => {
