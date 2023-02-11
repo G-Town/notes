@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[528],{99528:function(e,s,t){e.exports=t.p+"static/media/DishDetailComponent.c1007c799bfd8c042b79.md"}}]);
