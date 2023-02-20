@@ -1,8 +1,8 @@
-# **Assignment 1: Bootstrap and Responsive Design**
+## Assignment 1: Bootstrap and Responsive Design
 
 &nbsp;
 
-### **Task 1**
+#### **Task 1**
 
 In this task you will be updating the *aboutus.html* page to make use of the Bootstrap classes and components:
 
@@ -12,7 +12,7 @@ In this task you will be updating the *aboutus.html* page to make use of the Boo
 
 * Update the page to make use of all the Bootstrap JS components.
 
-### **Task 2**
+#### **Task 2**
 
 In this task you will be adding appropriate formatting to the web page contents using container, row and column classes 
 using the Bootstrap grid so that the web page is formatted to look like the figure given below.
@@ -26,7 +26,7 @@ on the right side for more content to be added later. The content should be stac
 
 ![Normal](FSWebDev-HKST/Bootstrap/Module1/normal.png?raw=true)
 
-### **Task 3**
+#### **Task 3**
 
 In this task you will use some responsive utilities provided by Bootstrap to hide some of the content only for extra 
 small screens. You will make use of the *hidden-** CSS classes provided by Bootstrap. To understand how to use these 

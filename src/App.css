@@ -1,13 +1,10 @@
 .App {
   text-align: center;
+  font-size: 15px;
 }
 
 .font-link {
   font-family: 'Montserrat', sans-serif;
-}
-
-p {
-  font-size: 15px;
 }
 
 img {
@@ -48,7 +45,7 @@ img {
 }
 
 .box {
-  background: rgba(0, 0, 0, 0.20);
+  background: rgba(0, 0, 0, 0.35);
   width: 80vw;
 }
 
@@ -57,7 +54,7 @@ img {
 }
 
 .bg-home {
-  background: linear-gradient(170deg, rgba(222, 74, 108, 0.853), rgba(210, 49, 87, 0.1) 70%),
+  background: linear-gradient(170deg, rgba(227, 81, 115, 0.853), rgba(210, 49, 87, 0.15) 70%),
     linear-gradient(215deg, rgb(0, 162, 255), rgba(16, 127, 192, 0.15) 75%),
     linear-gradient(265deg, rgb(16, 127, 192), rgba(16, 127, 192, 0.05) 60%),
     linear-gradient(5deg, rgba(144, 234, 48, 0.868), rgba(130, 235, 17) 100%);
@@ -65,7 +62,7 @@ img {
 
 .bg-home-image {
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.0)), url('../public/images/59bsn5hgnojy.jpg');
-  background-position: center -280px;
+  background-position: center -300px;
   /* background-repeat: repeat; */
   background-size: cover;
   background-attachment: fixed;

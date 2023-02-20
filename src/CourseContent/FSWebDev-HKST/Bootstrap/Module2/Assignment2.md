@@ -1,8 +1,8 @@
-# **Assignment 2: Bootstrap CSS Components**
+## Assignment 2: Bootstrap CSS Components
 
 &nbsp;
 
-### **Task 1**
+#### **Task 1**
 
 In this task you will be adding another content row to the page. The content row should contain the following:
 
@@ -17,7 +17,7 @@ placeholder information to identify the purpose of the fields.
 * The form should be enclosed inside a card with the heading "Reserve a Table". The card should occupy 8 columns and 
 centred in the row for small to extra-large screens. For extra-small screens, the card should span the entire row.
 
-### **Task 2**
+#### **Task 2**
 
 In this task you will be formatting the content in the second row of the page. The formatting should result in the following:
 
@@ -25,7 +25,7 @@ In this task you will be formatting the content in the second row of the page. T
 
 * Add a badge with the word “NEW” to the content as shown in the figure below.
 
-### **Task 3**
+#### **Task 3**
 
 In this task you will be adding a block-sized button to the Jumbotron to the right of the restaurant logo:
 

@@ -1,8 +1,8 @@
-# **Assignment 3: Bootstrap JavaScript Components**
+## Assignment 3: Bootstrap JavaScript Components
 
 &nbsp;
 
-### **Task 1**
+#### **Task 1**
 
 In this task you will move the table reservation form from the last content row into a modal. You should also remove the 
 last content row.
@@ -13,7 +13,7 @@ last content row.
 
 * The modal header should contain a X button to dismiss the modal.
 
-### **Task 2**
+#### **Task 2**
 
 In this task you will be adding a radio button group to the form to allow the selection of the smoking/non-smoking 
 section of the restaurant.
@@ -22,7 +22,7 @@ section of the restaurant.
 
 * The row containing the button group will have the label Section displayed preceding it in the form.
 
-### **Task 3**
+#### **Task 3**
 
 In this task you will be updating the Reserve Table button in the Jumbotron:
 

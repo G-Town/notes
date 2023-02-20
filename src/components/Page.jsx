@@ -6,8 +6,11 @@ import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import markdown from 'react-syntax-highlighter/dist/esm/languages/hljs/markdown';
 import allydark from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 SyntaxHighlighter.registerLanguage('markdown', markdown);
+
+
 
 function Page(props) {
   // const codeString=props.frames.find(page => page.id === props.id).url
@@ -43,6 +46,7 @@ function Page(props) {
         <div className="row">
           <ReactMarkdown
             children={post}
+            remarkPlugins={[remarkGfm]}
             components={{
               img: function ({ node, ...props }) {
                 const fileName=node.properties.src.replace('./', '');

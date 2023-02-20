@@ -1,10 +1,10 @@
-# **Assignment 1: React Components**
+## Assignment 1: React Components
 
 &nbsp;
 
 This assignment requires you to complete the following tasks. Detailed instructions for each task are given below. The picture of the completed web page included below indicates the location within the web page that will be updated by the three tasks.
 
-### Task 1
+#### Task 1
 
 In this task you will be adding a new DishdetailComponent  to your React application and include the component into the menu component's view so that the details of a specific dish are displayed there:
 
@@ -22,7 +22,7 @@ In this task you will be adding a new DishdetailComponent  to your React applica
 
 * If the dish is null then you should return an empty <div>
 
-### Task 2
+#### Task 2
 
 In this task you will be adding a card component to the DishdetailComponent view to display the details of the dish given above:
 
@@ -30,7 +30,7 @@ In this task you will be adding a card component to the DishdetailComponent view
 
 * Display the name of the dish as the Card title, and the description as the Card text.
 
-### Task 3
+#### Task 3
 
 In this task you will use the comments that are included in the dish object above to display a list of the comments for the dish. Please use your JavaScript knowledge to recall how you would access an inner property in a JavaScript object that itself points to an array of JavaScript objects (comments). This task involves the following steps:
 
@@ -44,6 +44,6 @@ In this task you will use the comments that are included in the dish object abov
 
 * If the comments are null, then you should return an empty <div>.
 
-![Normal](FSWebDev-HKST/FrontEndReact/Module1/normal.png?raw=true)
+![Normal](FSWebDev-HKST/FrontEndReact/Module1/normal.png)
 
-![Small](FSWebDev-HKST/FrontEndReact/Module1/small.png?raw=true)
+![Small](FSWebDev-HKST/FrontEndReact/Module1/small.png)

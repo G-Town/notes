@@ -1,104 +1,131 @@
-# **Bootstrap and JQuery**
+## Web Tools
 
-### **Adding the Carousel Control Buttons**
+&nbsp;
 
-We will introduce two new buttons into the carousel component that we already included in the index.html page. To add 
+---
+
+&nbsp;
+
+### Bootstrap and JQuery
+
+&nbsp;
+
+##### **Adding the Carousel Control Buttons**
+
+* We will introduce two new buttons into the carousel component that we already included in the index.html page. To add 
 the two buttons to the carousel, add the following code to the end of the carousel:
 
 ```html
-<div class="btn-group" id="carouselButtons">
-    <button class="btn btn-danger btn-sm" id="carousel-pause">
-        <span class="fa fa-pause"></span>
-    </button>
-    <button class="btn btn-danger btn-sm" id="carousel-play">
-        <span class="fa fa-play"></span>
-    </button>
-</div>
+        <div class="btn-group" id="carouselButton">
+          <button class="btn btn-danger btn-sm" id="carousel-pause">
+            <span class="fa fa-pause"></span>
+          </button>
+          <button class="btn btn-danger btn-sm" id="carousel-play">
+            <span class="fa fa-play"></span>
+          </button>
+        </div>
 ```
 
 We are adding the two buttons inside a button group with the ID carouselButtons. The two buttons contain the pause and 
 play glyphicons to indicate their corresponding actions.
 
-### **Adding CSS Class for the Buttons**
+&nbsp;
+
+##### **Adding CSS Class for the Buttons**
 
 * Next, we add the following CSS class to styles.css file to position the buttons at the bottom-right corner of the 
 carousel:
 
 ```css
-#carouselButtons {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
+#carouselButton {
+  right:0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
 }
 ```
 
-### **Adding JavaScript Code**
+&nbsp;
+
+##### **Adding JavaScript Code**
 
 * Finally we add the following JavaScript code to activate the buttons:
 
 ```html
-<script>
+  <script>
     $(document).ready(function(){
-        $("#mycarousel").carousel( { interval: 2000 } );
-        $("#carousel-pause").click(function(){
-            $("#mycarousel").carousel('pause');
-        });
-        $("#carousel-play").click(function(){
-            $("#mycarousel").carousel('cycle');
-        });
+      $("#mycarousel").carousel( { interval: 2000 } );
+      $("#carousel-pause").click(function(){
+        $("#mycarousel").carousel('pause');
+      });
+      $("#carousel-play").click(function(){
+        $("#mycarousel").carousel('cycle');
+      });
     });
-</script>
+  </script>
 ```
 
-### **Modifying the Carousel Control Buttons**
+&nbsp;
+
+---
+
+&nbsp;
+
+### More Bootstrap and JQuery
+
+&nbsp;
+
+##### **Modifying the Carousel Control Buttons**
 
 * We will modify the carousel control buttons in the carousel component that we already included in the index.html page. 
 Instead of two buttons, we will use a single button that will indicate if the carousel is currently cycling or paused. 
 Furthermore we can use the button to toggle the carousel cycling behavior:
 
 ```html
-<button class="btn btn-danger btn-sm" id="carousel-button">
-    <span id="carousel-button-icon" class="fa fa-pause"></span>
-</button>
+          <button class="btn btn-danger btn-sm" id="carouselButton">
+            <span id="carousel-button-icon" class="fa fa-pause"></span>
+          </button>
 ```
 
-#### **Modifying CSS Class for the Button**
+We are adding a single button inside a button group with the ID carouselButton. The buttons will show either as a pause 
+or play button based on the current behavior of the carousel.
 
-* Next, we add the following CSS class to styles.css file to position the button at the bottom-right corner of the 
-carousel:
+&nbsp;
 
-```css
-#carousel-button {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
-}
-```
-
-### **Modifying JavaScript Code**
+##### **Modifying JavaScript Code**
 
 * Finally we modify the JavaScript code to control the behavior of the carousel and also show the appropriate button:
 
 ```javascript
-$("#carousel-button").click(function(){
-    if ($("#carousel-button").children("span").hasClass('fa-pause')) {
-        $("#mycarousel").carousel('pause');
-        $("#carousel-button").children("span").removeClass('fa-pause');
-        $("#carousel-button").children("span").addClass('fa-play');
-    }
-    else if ($("#carousel-button").children("span").hasClass('fa-play')){
-        $("#mycarousel").carousel('cycle');
-        $("#carousel-button").children("span").removeClass('fa-play');
-        $("#carousel-button").children("span").addClass('fa-pause');          
-    }
-});
+      $("#carouselButton").click(function(){
+        if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+          $("#mycarousel").carousel('pause');
+          $("#carouselButton").children("span").removeClass('fa-pause');
+          $("#carouselButton").children("span").addClass('fa-play');
+        }
+        else if ($("#carouselButton").children("span").hasClass('fa-play')){
+          $("#mycarousel").carousel('cycle');
+          $("#carouselButton").children("span").removeClass('fa-play');
+          $("#carouselButton").children("span").addClass('fa-pause');                    
+        }
+      });
 ```
-# **Less**
 
-### **Adding Less Variables**
+&nbsp;
+
+---
+
+&nbsp;
+
+### Less
+
+&nbsp;
+
+##### **Adding Less Variables**
 
 * Open the *conFusion* project in a text editor of your choice. In the css folder, create a file named *styles.less*. 
 We will add the Less code into this file.
+
 * Add the following Less variables into the file:
 
 ```less
@@ -106,93 +133,113 @@ We will add the Less code into this file.
 @background-dark: #512DA8;
 @background-light: #9575CD;
 @background-pale: #D1C4E9;
+
 // Height variables
 @carousel-item-height: 300px;
 ```
+We have just added a few color and a height variable. We will make use of these variables while defining the classes.
 
-### **Less Mixins**
+&nbsp;
+
+##### **Less Mixins**
 
 * Next we add a mixin into the file as follows:
 
 ```less
-zero-margin (@pad-up-dn: 0px, @pad-left-right: 0px) {
+.zero-margin (@pad-up-dn: 0px, @pad-left-right: 0px) {
 	margin:0px auto;
 	padding: @pad-up-dn @pad-left-right;
 }
 ```
+
 We will make use of this to define several row classes next.
 
 * Using the variables and Mixin class that we defined earlier, add the following row classes to the file:
 
 ```less
-.row-header {
-    .zero-margin();
+.row-header{
+  .zero-margin();
 }
+
 .row-content {
-    .zero-margin(50px,0px);
-    border-bottom: 1px ridge;
-    min-height:400px;
+  .zero-margin(50px,0px);
+  border-bottom: 1px ridge;
+  min-height:400px;
 }
-.footer {
-    background-color: @background-pale;
-    .zero-margin(20px, 0px);
+
+.footer{
+  background-color: @background-pale;
+  .zero-margin(20px, 0px);
 }
+
 .jumbotron {
-    .zero-margin(70px,30px);
-    background: @background-light ;
-    color:floralwhite;
+  .zero-margin(70px,30px);
+  background: @background-light ;
+  color:floralwhite;
 }
-address {
-    font-size:80%;
-    margin:0px;
-    color:#0f0f0f;
+
+address{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
 }
-body {
-    padding:50px 0px 0px 0px;
-    z-index:0;
+
+body{
+  padding:50px 0px 0px 0px;
+  z-index:0;
 }
-.navbar-inverse {
-     background-color: @background-dark;
+
+.navbar-dark {
+  background-color: @background-dark;
 }
+
 .tab-content {
-    border-left: 1px solid @lt-gray;
-    border-right: 1px solid @lt-gray;
-    border-bottom: 1px solid @lt-gray;
-    padding: 10px;
+  border-left: 1px solid @lt-gray;
+  border-right: 1px solid @lt-gray;
+  border-bottom: 1px solid @lt-gray;
+  padding: 10px;
 }
 ```
+
 Note the use of the variables and the mixin with various parameters in defining the classes.
 
-### **Nesting Selectors**
+&nbsp;
+
+##### **Nesting Selectors**
 
 * Next we add a carousel class to illustrate the use of nesting of classes in Less, as follows:
 
 ```less
-carousel {
-    background:@background-dark;
-    .carousel-item {
-        height: @carousel-item-height;
-        img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            min-height: 300px;
-        }
+.carousel {
+  background:@background-dark;
+
+  .carousel-item {
+    height: @carousel-item-height;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
     }
+  }
 }
-#carousel-button {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
+
+#carouselButton {
+  right:0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
 }
 ```
 
-### **Installing and using the lessc Compiler**
+&nbsp;
 
-Now we install the node module to support the compilation of the Less file. To do this, type the following at the 
+##### **Installing and using the lessc Compiler**
+
+* Now we install the node module to support the compilation of the Less file. To do this, type the following at the 
 command prompt:
 
-`npm install -g less`
+`npm install -g less@2.7.2`
 
 This will install the *less* NPM module globally so that it can be used by any project. **Note: if you are executing 
 this on a Mac or Linux machine, you may need to add "sudo" to the beginning of this command**. This will make available 
@@ -206,9 +253,17 @@ the Less file.
 
 `lessc styles.less styles.css`
 
-# **Scss**
+&nbsp;
 
-### **Adding Scss Variables**
+---
+
+&nbsp;
+
+### Scss
+
+&nbsp;
+
+##### **Adding Scss Variables**
 
 * Open the *conFusion* project in a text editor of your choice. In the css folder, create a file named styles.scss. We 
 will add the Scss code into this file.
@@ -220,13 +275,16 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
+
 // Height variables
 $carousel-item-height: 300px;
 ```
 
 We have just added a few color and a height variable. We will make use of these variables while defining the classes.
 
-### **Scss Mixins**
+&nbsp;
+
+##### **Scss Mixins**
 
 * Next we add a mixin into the file as follows:
 
@@ -243,74 +301,88 @@ We will make use of this to define several row classes next.
 
 ```scss
 .row-header{
-    @include zero-margin(0px,0px);
+  @include zero-margin(0px,0px);
 }
+
 .row-content {
-    @include zero-margin(50px,0px);
-    border-bottom: 1px ridge;
-    min-height:400px;
+  @include zero-margin(50px,0px);
+  border-bottom: 1px ridge;
+  min-height:400px;
 }
+
 .footer{
-    background-color: $background-pale;
-    @include zero-margin(20px, 0px);
+  background-color: $background-pale;
+  @include zero-margin(20px, 0px);
 }
+
 .jumbotron {
-    @include zero-margin(70px,30px);
-    background: $background-light ;
-    color:floralwhite;
+  @include zero-margin(70px,30px);
+  background: $background-light ;
+  color:floralwhite;
 }
+
 address{
-    font-size:80%;
-    margin:0px;
-    color:#0f0f0f;
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
 }
+
 body{
-    padding:50px 0px 0px 0px;
-    z-index:0;
+  padding:50px 0px 0px 0px;
+  z-index:0;
 }
-.navbar-inverse {
-    background-color: $background-dark;
+
+.navbar-dark {
+  background-color: $background-dark;
 }
+
 .tab-content {
-    border-left: 1px solid $lt-gray;
-    border-right: 1px solid $lt-gray;
-    border-bottom: 1px solid $lt-gray;
-    padding: 10px;
+  border-left: 1px solid $lt-gray;
+  border-right: 1px solid $lt-gray;
+  border-bottom: 1px solid $lt-gray;
+  padding: 10px;
 }
 ```
 
 Note the use of the variables and the mixin with various parameters in defining the classes.
 
-### **Nesting Selectors**
+&nbsp;
+
+##### **Nesting Selectors**
 
 * Next we add a carousel class to illustrate the use of nesting of classes in Scss, as follows:
 
 ```scss
 .carousel {
-    background:$background-dark;
-    .carousel-item {
-        height: $carousel-item-height;
-        img {
-            position: absolute;
-            top: 0;n
-            left: 0;
-            min-height: 300px;
-        }
+  background:$background-dark;
+
+  .carousel-item {
+    height: $carousel-item-height;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-height: 300px;
     }
+  }
 }
-#carousel-button {
-    right:0px;
-    position: absolute;
-    bottom: 0px;
+
+#carouselButton {
+  right:0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
 }
 ```
 
-### **Installing and using the node-sass module**
+&nbsp;
+
+##### **Installing and using the node-sass module**
 
 * Now we install the node module to support the compilation of the Scss file to a CSS file. To do this, type the 
 following at the command prompt:
 
-`npm install --save-dev node-sass`
+`npm install --save-dev node-sass@4.7.2`
 
 This will install the *node-sass* NPM module into your project and also add it as a development dependency in your 
 *package.json* file.
@@ -318,7 +390,7 @@ This will install the *node-sass* NPM module into your project and also add it a
 * Next open your package.json file and add the following line into the scripts object there. This adds a script to 
 enable the compilation of the Scss file into a CSS file:
 
-`"scss": "node-sass -o css/ css/"`
+`    "scss": "node-sass -o css/ css/"`
 
 * In order to transform the Scss file to a CSS file, type the following at the prompt:
 

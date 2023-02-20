@@ -205,18 +205,90 @@ class WebDev extends Component {
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderMDCard page={this.props.pages.find(page => page.id === 23)} />
               </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 24)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 25)} />
+              </div>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 2 - Multiple Regressio</h4>
+              <h4>Module 2 - React Router and Single Page Applications</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 26)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 27)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 28)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 29)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 30)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 31)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 32)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 33)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 34)} />
+              </div>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 3 - Assessing Performance</h4>
+              <h4>Module 3 - React Forms, Flow Architecture, and Introduction to Redux</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 35)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 36)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 37)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 38)} />
+              </div>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 4 - Ridge Regression</h4>
+              <h4>Module 4 - More Redux and Client-Server Communication</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 39)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 40)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 41)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 42)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 43)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 44)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 45)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 46)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 47)} />
+              </div>
             </div>
           </Collapse>
           <hr /><div className="row p-5">
@@ -244,19 +316,19 @@ class WebDev extends Component {
           <Collapse isOpen={this.state.isMod3Open}>
             <hr />
             <div className="row py-5">
-              <h4>Module 1 - Welcome</h4>
+              <h4>Module 1 - Introduction to Server-Side Development</h4>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 2 - Linear Classifiers & Logistic Regression</h4>
+              <h4>Module 2 - Data, Data, where art Thou Data?</h4>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 3 - Learning Linear Classifiers</h4>
+              <h4>Module 3 - Halt! Who Goes There?</h4>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 4 - Overfitting & Regularization in Logistic Regression</h4>
+              <h4>Module 4 - Backend as a Service</h4>
             </div>
           </Collapse>
         </div>
