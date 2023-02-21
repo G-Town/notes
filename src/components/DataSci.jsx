@@ -90,6 +90,19 @@ class DataSci extends Component {
           <Collapse isOpen={this.state.isMod1Open}>
             <div className="row pb-5">
               <h4>Module 1 - Fundmentals of Data Manipulation</h4>
+
+              {/* <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <Card style={{ width: '15rem' }} className="bg-dark">
+                  <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1533425568172.jpg"} />
+                  <CardBody className="text-light">
+                    <CardTitle>{}</CardTitle>
+                    <CardSubtitle></CardSubtitle>
+                    <CardText></CardText>
+                    <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
+                  </CardBody>
+                </Card>
+              </div> */}
+
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 0)} />
               </div>

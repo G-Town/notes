@@ -22,6 +22,8 @@ appropriately handle the loading and errors.
 * Update *AboutComponent.js* to render the leaders information. You should handle the loading and error condition 
 appropriately.
 
+![Task 1](FSWebDev-HKST/FrontEndReact/Module4/task1.png)
+
 #### **Task 2**
 
 In this task, you will enable the saving of the feedback data submitted using the feedback form in the Contact 
@@ -36,6 +38,8 @@ on the json-server.
 * Update the *ContactComponent.js* to submit the form data using the postFeedback() method by passing the feedback form 
 data.
 
+![Task 2](FSWebDev-HKST/FrontEndReact/Module4/task2.png)
+
 #### **Task 3**
 
 In this task you will use simple animation using react-animation-components to enable a staggered rendering of the list 
@@ -43,3 +47,5 @@ of leaders in AboutComponent:
 
 * Use the expand animation that we have already used earlier to judiciously apply animation to the various stages of the 
 form submission.
+
+![Task 3](FSWebDev-HKST/FrontEndReact/Module4/task3.png)

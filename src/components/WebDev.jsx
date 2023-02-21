@@ -317,18 +317,93 @@ class WebDev extends Component {
             <hr />
             <div className="row py-5">
               <h4>Module 1 - Introduction to Server-Side Development</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 48)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 49)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 50)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 51)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 52)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 53)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 54)} />
+              </div>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 2 - Data, Data, where art Thou Data?</h4>
+              <h4>Module 2 - MongoDB</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 55)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 56)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 57)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 58)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 59)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 60)} />
+              </div>
             </div>
             <hr />
             <div className="row py-5">
-              <h4>Module 3 - Halt! Who Goes There?</h4>
+              <h4>Module 3 - User Authentication</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 61)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 62)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 63)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 64)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 65)} />
+              </div>
             </div>
             <hr />
             <div className="row py-5">
               <h4>Module 4 - Backend as a Service</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 66)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 67)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 68)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 69)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 70)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 71)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMDCard page={this.props.pages.find(page => page.id === 72)} />
+              </div>
             </div>
           </Collapse>
         </div>
