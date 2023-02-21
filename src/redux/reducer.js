@@ -1,6 +1,6 @@
 import { DSUM_NOTEBOOKS } from '../data/DSUMnotebooks';
 import { MLUW_NOTEBOOKS } from '../data/MLUWnotebooks';
-import { WDHK_PAGES } from '../data/FSWDpages';
+import { WDHK_PAGES } from '../data/WDHKpages';
 
 export const initialState = {
     DSUMnotebooks: DSUM_NOTEBOOKS,
