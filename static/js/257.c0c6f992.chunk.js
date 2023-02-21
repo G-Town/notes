@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[257],{28257:function(n,s,a){a.r(s),a.d(s,{Loading:function(){return r}});a(72791);var e=a(80184),r=function(){return(0,e.jsxs)("div",{className:"col-12",children:[(0,e.jsx)("span",{className:"fa fa-spinner fa-pulse fa-3x fa-fw text-primary"}),(0,e.jsx)("p",{children:"Loading . . ."})]})}}}]);
-//# sourceMappingURL=257.c0c6f992.chunk.js.map

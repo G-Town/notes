@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[2415],{82415:function(e,s,t){e.exports=t.p+"static/media/promoRouter.cca01a983af816e6421c.md"}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[2238],{82238:function(e,t,s){e.exports=s.p+"static/media/FooterComponent.5cc4c12dfe63f37a2b43.md"}}]);

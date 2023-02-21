@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[9150],{69150:function(e,t,f){e.exports=f.p+"static/media/favoriteRouter.10da53f5f563ff65daf8.md"}}]);

@@ -1,0 +1,2 @@
+(self.webpackChunknotes=self.webpackChunknotes||[]).push([[2449],{52737:function(e,t,n){"use strict";n.r(t);var s=n(99607),c=n(9555),r=n(80184);test("renders learn react link",(function(){(0,s.sY)((0,r.jsx)(c.default,{}));var e=s.sp.getByText(/learn react/i);expect(e).toBeInTheDocument()}))},24654:function(){}}]);
+//# sourceMappingURL=2449.0fe19a69.chunk.js.map

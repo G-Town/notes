@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[3382],{53382:function(e,s,t){e.exports=t.p+"static/media/promotions.13c9a70cd525bdbe6bbb.md"}}]);

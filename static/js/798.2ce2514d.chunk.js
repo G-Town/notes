@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[798],{64798:function(s,e,t){s.exports=t.p+"static/media/json_files.2dd0571b098fa3d53a7d.md"}}]);

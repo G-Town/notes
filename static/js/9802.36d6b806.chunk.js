@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[9802],{39802:function(s,e,t){s.exports=t.p+"static/media/Assignment2.93db3a5bb48b1520f240.md"}}]);

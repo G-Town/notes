@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[100],{31100:function(e,s,c){e.exports=c.p+"static/media/logo.6ce24c58023cc2f8fd88.svg"}}]);
