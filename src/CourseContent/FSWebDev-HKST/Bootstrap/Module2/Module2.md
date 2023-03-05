@@ -33,7 +33,7 @@ In the above code, we can see the use of the nav element to specify the navigati
 element is styled by the *navbar* that declares it as a navigation bar, and the *navbar-inverse* class to specify that 
 the page should use the dark navigation bar. You will now notice the addition of a link with the name of the restaurant. 
 This is the brand name for the website. You can replace this with the logo for the website. This is created by the 
-**<a class="navbar-brand">** tag. In addition the inner ul is used to specify the items to be put in the navigation bar. 
+**\<a class="navbar-brand">** tag. In addition the inner ul is used to specify the items to be put in the navigation bar. 
 This *ul* is styled with *navbar-nav* class to specify that the items should be displayed inline inside the navigation 
 bar. We also use the container class inside the navigation bar.
 
@@ -124,16 +124,20 @@ to the row containing the About Us title in *aboutus.html*.
 * One of the most popular icon font toolkit is Font Awesome. Go to its website http://fontawesome.io/ to check out more 
 details about this icon font. You can get Font Awesome using npm by typing the following at the prompt:
 
-`npm install font-awesome --save`
+```powershell
+npm install font-awesome --save
+```
 
 * Another module that we install is Bootstrap Social that enables the addition of Social buttons to our site. You can 
 find more information about it at https://lipis.github.io/bootstrap-social/. To install it using npm, type the following 
 at the prompt:
 
-`npm i bootstrap-social --save`
+```powershell
+npm i bootstrap-social --save
+```
 
-* We now need to include the CSS files for font awesome and bootstrap-social in the index.html file. Add the following 
-code to the head of the file after the links for importing Bootstrap CSS classes. Do the same change to aboutus.html 
+* We now need to include the CSS files for font awesome and bootstrap-social in the *index.html* file. Add the following 
+code to the head of the file after the links for importing Bootstrap CSS classes. Do the same change to *aboutus.html* 
 file:
 
 ```html
@@ -142,7 +146,7 @@ file:
 ```
 
 * Let us now use some font icons in our web page and decorate it. Update the navbar's ul list items as follows in 
-index.html:
+*index.html*:
 
 ```html
           <li class="nav-item active">
@@ -158,7 +162,7 @@ index.html:
             <a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a>
           </li>
 ```
-* Similarly update the navbar's ul list items as follows in aboutus.html:
+* Similarly update the navbar's ul list items as follows in *aboutus.html*:
 
 ```html
           <li class="nav-item">
@@ -174,16 +178,16 @@ index.html:
             <a class="nav-link" href="#"><span class="fa fa-address-card fa-lg"></span> Contact</a>
           </li>
 ```
-* Next, in both index.html and aboutus.html, go down to the address in the footer of the page and replace the "Tel.", 
-"Fax" and "Email" with the corresponding font awesome based icons as follows:
+* Next, in both *index.html* and *aboutus.html*, go down to the address in the footer of the page and replace the 
+"Tel.", "Fax" and "Email" with the corresponding font awesome based icons as follows:
 
 ```html
             <i class="fa fa-phone fa-lg"></i>: +852 1234 5678<br>
             <i class="fa fa-fax fa-lg"></i>: +852 8765 4321<br>
             <i class="fa fa-envelope fa-lg"></i>: <a href="mailto:confusion@food.net">confusion@food.net</a>
 ```
-* Finally, let us use the bootstrap-social CSS classes to create the social buttons in the footer in both index.html and 
-aboutus.html, by replacing the social sites' links with the following code:
+* Finally, let us use the bootstrap-social CSS classes to create the social buttons in the footer in both *index.html* 
+and *aboutus.html*, by replacing the social sites' links with the following code:
 
 ```html
           <div style="text-align:center">
@@ -232,9 +236,9 @@ three buttons:
         </div>
 ```
 
-Note how we define the button bar using the *btn-group* class, and then add the three buttons using the **<a>** tag. In 
+Note how we define the button bar using the *btn-group* class, and then add the three buttons using the **\<a>** tag. In 
 this case, the three buttons are hyperlinks that cause an action and have an href associated with them. So we decided 
-to use the **<a>** tag instead of the **<button>** tag. Note how the **<a>** tags have been styled using the *btn* class.
+to use the **\<a>** tag instead of the **\<button>** tag. Note how the **\<a>** tags have been styled using the *btn* class.
 
 &nbsp;
 
@@ -296,6 +300,8 @@ number and email:
 ```
 Note the use of the *input-group* and *input-group-addon* classes.
 
+&nbsp;
+
 ##### **Adding a Checkbox and Select**
 
 * We now see the addition of a checkbox and a select element to the form. Note the styling of these elements using 
@@ -320,6 +326,8 @@ Bootstrap classes:
           </div>
 ```
 
+&nbsp;
+
 ##### **Adding a textarea**
 
 * Next we add a textarea for the users to submit their feedback comments as follows:
@@ -332,6 +340,8 @@ Bootstrap classes:
             </div>
           </div>
 ```
+
+&nbsp;
 
 ##### **Adding the Submit Button**
 
@@ -460,7 +470,7 @@ col-12 col-sm-6 to it and then adding the card:
       </div>
 ```
 
-Note the use of the `<blockquote>` tag to create a block quote in the card. We can use a `<footer>` inside the block 
+Note the use of the **\<blockquote>** tag to create a block quote in the card. We can use a **\<footer>** inside the block 
 quote to specify the attribution of the quote to its origin.
 
 &nbsp;
@@ -475,8 +485,8 @@ quote to specify the attribution of the quote to its origin.
 
 ##### **Adding the Restaurant Logo**
 
-* We will now add the restaurant logo to the Jumbotron. In index.html go to the header row inside the jumbotron and 
-replace the second `<div>` column with the following code:
+* We will now add the restaurant logo to the Jumbotron. In *index.html* go to the header row inside the jumbotron and 
+replace the second **\<div>** column with the following code:
 
 ```html
         <div class="col-12 col-sm align-self-center">
@@ -487,7 +497,7 @@ replace the second `<div>` column with the following code:
 You will immediately notice the restaurant logo being displayed in the jumbotron.
 
 * Next, we will add the logo to the navbar where we display the restaurant brand. Go to the navbar and replace the code 
-there for the **<a>** tag with the "navbar-brand" class with the following code:
+there for the **\<a>** tag with the "navbar-brand" class with the following code:
 
 ```html
       <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
@@ -564,7 +574,7 @@ dish:
 ```
 
 * Next we will add a badge as a badge-pill right next to the earlier tag in the web page. Add the following code to the 
-**<h2>** tag:
+**\<h2>** tag:
 
 ```html
 <span class="badge badge-pill badge-default">$4.99</span>

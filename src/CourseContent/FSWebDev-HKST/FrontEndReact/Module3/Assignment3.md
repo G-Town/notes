@@ -14,6 +14,8 @@ In this task you will add a new class component named CommentForm. You need to c
 
 ![Form](FSWebDev-HKST/FrontEndReact/Module3/form.png)
 
+&nbsp;
+
 #### **Task 2**
 
 In this task you will construct the form for users to submit their comments as shown in the image below. You need to complete the following:
@@ -23,6 +25,8 @@ In this task you will construct the form for users to submit their comments as s
 * The rating field in the comment form is implemented using a select, the author is implemented using a text field, while the comment uses a textarea with six rows.
 
 ![Submit](FSWebDev-HKST/FrontEndReact/Module3/submit.png)
+
+&nbsp;
 
 #### **Task 3**
 

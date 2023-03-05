@@ -1,4 +1,4 @@
-```js
+```jsx
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Button, Label, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';

@@ -2,17 +2,28 @@ import '../App.css';
 import React, { useState, useEffect } from 'react';
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
-import markdown from 'react-syntax-highlighter/dist/esm/languages/hljs/markdown';
-import allydark from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
 import ReactMarkdown from 'react-markdown';
+
+import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
+
+import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
+import powershell from 'react-syntax-highlighter/dist/esm/languages/prism/powershell';
+
+import { atomDark } from    'react-syntax-highlighter/dist/esm/styles/prism';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
+
+import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
 
-SyntaxHighlighter.registerLanguage('markdown', markdown);
+// SyntaxHighlighter.registerLanguage('markdown', markdown);
+// SyntaxHighlighter.registerLanguage('javascript', javascript);
+// SyntaxHighlighter.registerLanguage('html', html);
 
+SyntaxHighlighter.registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('powershell', powershell);
 
-
-function Page(props) {
+function Markdown(props) {
   // const codeString=props.frames.find(page => page.id === props.id).url
   const file_name = props.frames.find(page => page.id === props.id).url;
   const [post, setPost] = useState('');
@@ -45,8 +56,10 @@ function Page(props) {
       <div className="container box text-white text-start justify-items-start p-5">
         <div className="row">
           <ReactMarkdown
-            children={post}
+            // children={post}
+            rehypePlugins={[rehypeRaw]}
             remarkPlugins={[remarkGfm]}
+            // components={codeBlock}
             components={{
               img: function ({ node, ...props }) {
                 const fileName=node.properties.src.replace('./', '');
@@ -54,17 +67,26 @@ function Page(props) {
                 props.alt=`${fileName}`
                 return <img {...props} />;
               },
-              code({ children, ...props }) {
-                return (
+              code({ node, inline, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '');
+                return !inline && match ? (
                   <SyntaxHighlighter
-                    language="markdown"
-                    style={allydark}
-                  >
-                    {children}
+                      language={match[1]}
+
+                      style={a11yDark}
+
+                      PreTag="div"
+                      {...props}>
+                    {String(children).replace(/\n$/, '')}
                   </SyntaxHighlighter>
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
                 );
               }
             }}>
+              {post}
           </ReactMarkdown>
         </div>
       </div>
@@ -72,4 +94,4 @@ function Page(props) {
     </div>
   );
 }
-export default Page;
+export default Markdown;

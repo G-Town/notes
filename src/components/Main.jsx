@@ -14,15 +14,19 @@ import WebDev from './WebDev'
 import Footer from './Footer';
 // import Sidebar from './Sidebar';
 import Notebook from './Notebook';
-import Page from './Page'
+import Markdown from './Markdown';
+import Doc from './Document';
 import IFrame from './IFrame';
 import { BsMarkdown } from 'react-icons/bs';
 
 const mapStateToProps = state => {
   return {
     DSUMnotebooks: state.DSUMnotebooks,
+    DSUMdocs: state.DSUMdocs,
     MLUWnotebooks: state.MLUWnotebooks,
-    WDHKpages: state.WDHKpages
+    MLUWdocs: state.MLUWdocs,
+    WDHKmarkdown: state.WDHKmarkdown,
+    WDHKdocs: state.WDHKdocs
   }
 }
 
@@ -49,23 +53,7 @@ function Main(props) {
     );
   }
 
-  const DataSciNotes = () => {
-    return (
-      <DataSci notebooks={props.DSUMnotebooks} />
-    );
-  }
-  const MachineLearningNotes = () => {
-    return (
-      <MachineLearning notebooks={props.MLUWnotebooks} />
-    );
-  }
-  const WebDevNotes = () => {
-    return (
-      <WebDev pages={props.WDHKpages} />
-    );
-  }
-
-  const DSUMNotebook = () => {
+  const DSUM_Notebook = () => {
     return (
       <Notebook
         frames={props.DSUMnotebooks}
@@ -73,7 +61,23 @@ function Main(props) {
         crumb={["/ApplDataSci-UMich", "DataSci"]}
       />);
   }
-  const MLUWNotebook = () => {
+  const DSUM_Doc = () => {
+    return (
+      <Doc
+        docs={props.DSUMdocs}
+        title={useParams().docTitle}
+        crumb={["/ApplDataSci-UMich", "DataSci"]}
+      />);
+  }
+  const DSUM_Markdown = () => {
+    return (
+      <Markdown
+        frames={props.DSUMdocs}
+        id={parseInt(useParams().docId, 10)}
+        crumb={["/ApplDataSci-UMich", "DataSci"]}
+      />);
+  }
+  const MLUW_Notebook = () => {
     return (
       <Notebook
         frames={props.MLUWnotebooks}
@@ -81,22 +85,36 @@ function Main(props) {
         crumb={["/MachineLearning-UWash", "MachineLearning"]}
       />);
   }
-  const WDHKPage = () => {
+  const MLUW_Doc = () => {
     return (
-      <Page
-        frames={props.WDHKpages}
+      <Doc
+        docs={props.MLUWdocs}
+        title={useParams().docTitle}
+      />);
+  }
+  const WDHK_Markdown = () => {
+    return (
+      <Markdown
+        frames={props.WDHKmarkdown}
         id={parseInt(useParams().pageId, 10)}
         crumb={["/FSWebDev-HKST", "WebDev"]}
       />);
   }
-  const WDHKNotebook = () => {
+  const WDHK_Notebook = () => {
     return (
       <Notebook
-        frames={props.WDHKpages}
+        frames={props.WDHKmarkdown}
         id={parseInt(useParams().pageId, 10)}
         crumb={["/FSWebDev-HKST", "WebDev"]}
       />
     );
+  }
+  const WDHK_Doc = () => {
+    return (
+      <Doc
+        docs={props.WDHKdocs}
+        id={parseInt(useParams().docId, 10)}
+      />);
   }
 
   return (
@@ -108,18 +126,24 @@ function Main(props) {
         {/* <Route path="/list" element={<List />} /> */}
         <Route path="/about" element={<About />} />
 
-        <Route path="/ApplDataSci-UMich" element={<DataSciNotes />} />
-        <Route path="ApplDataSci-UMich/:notebookId" element={<DSUMNotebook />} />
+        <Route path="/ApplDataSci-UMich"
+          element={<DataSci notebooks={props.DSUMnotebooks} docs={props.DSUMdocs} />} />
+        <Route path="ApplDataSci-UMich/notebook/:notebookId" element={<DSUM_Notebook />} />
+        <Route path="ApplDataSci-UMich/document/:docTitle" element={<DSUM_Doc />} />
+        <Route path="ApplDataSci-UMich/page/:docId" element={<DSUM_Markdown />} />
 
         {/* <Route path="" element ={} /> */}
 
-        <Route path="/MachineLearning-UWash" element={<MachineLearningNotes />} />
-        <Route path="MachineLearning-UWash/:notebookId" element={<MLUWNotebook />} />
+        <Route path="/MachineLearning-UWash"
+          element={<MachineLearning notebooks={props.MLUWnotebooks} docs={props.MLUWdocs} />} />
+        <Route path="MachineLearning-UWash/:notebookId" element={<MLUW_Notebook />} />
 
-        <Route path="/FSWebDev-HKST" element={<WebDevNotes />} />
-        <Route path="FSWebDev-HKST/:pageId" element={<WDHKPage />} />
-        <Route path="FSWebDev-HKST/file/:pageId" element={<WDHKNotebook />} />
-        
+        <Route path="/FSWebDev-HKST"
+          element={<WebDev pages={props.WDHKmarkdown} docs={props.WDHKdocs} />}
+        />
+        <Route path="FSWebDev-HKST/:pageId" element={<WDHK_Markdown />} />
+        <Route path="FSWebDev-HKST/file/:pageId" element={<WDHK_Notebook />} />
+
 
         <Route path="/" element={<Navigate replace to="/home" />} />
       </Routes>

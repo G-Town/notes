@@ -7,15 +7,43 @@ import {
 import { NavLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom/dist';
 
-function RenderCard({ notebook }) {
+function RenderNotebook({ notebook }) {
   return (
     <Card style={{ width: '15rem' }} className="bg-dark">
-      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1533425568172.jpg"} alt={notebook.module} />
+      <CardImg height='160' src={notebook.image} alt={notebook.module} />
       <CardBody className="text-light">
         <CardTitle>{notebook.title}</CardTitle>
         <CardSubtitle></CardSubtitle>
         <CardText></CardText>
-        <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
+        <NavLink to={`/ApplDataSci-UMich/notebook/${notebook.id}`} className="stretched-link"></NavLink>
+      </CardBody>
+    </Card>
+  );
+}
+
+function RenderDoc({ doc }) {
+  return (
+    <Card style={{ width: '15rem' }} className="bg-dark">
+      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/red/1663565113444029.jpg"} />
+      <CardBody className="text-light">
+        <CardTitle>{doc.title}</CardTitle>
+        <CardSubtitle></CardSubtitle>
+        <CardText></CardText>
+        <NavLink to={`/ApplDataSci-UMich/document/${doc.title}`} className="stretched-link"></NavLink>
+      </CardBody>
+    </Card>
+  )
+}
+
+function RenderMD({ doc }) {
+  return (
+    <Card style={{ width: '15rem' }} className="bg-dark">
+      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/red/1663565113444029.jpg"} />
+      <CardBody className="text-light">
+        <CardTitle>{doc.title}</CardTitle>
+        <CardSubtitle></CardSubtitle>
+        <CardText></CardText>
+        <NavLink to={`/ApplDataSci-UMich/page/${doc.id}`} className="stretched-link"></NavLink>
       </CardBody>
     </Card>
   );
@@ -91,92 +119,92 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 1 - Fundmentals of Data Manipulation</h4>
 
-              {/* <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <Card style={{ width: '15rem' }} className="bg-dark">
-                  <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1533425568172.jpg"} />
-                  <CardBody className="text-light">
-                    <CardTitle>{}</CardTitle>
-                    <CardSubtitle></CardSubtitle>
-                    <CardText></CardText>
-                    <NavLink to={`/ApplDataSci-UMich/${notebook.id}`} className="stretched-link"></NavLink>
-                  </CardBody>
-                </Card>
-              </div> */}
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 0)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: 50 Years of Data Science")} />
+              </div>
 
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 0)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 0)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 1)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 1)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 2)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 2)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 3)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 3)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 2 - Basic Data Processing</h4>
+
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 4)} />
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 2)} />
+              </div>
+
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 4)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 5)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 5)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 6)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 6)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 7)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 7)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 8)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 8)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 9)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 9)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 10)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 10)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 11)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 11)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 12)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 12)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 3 - More Data Processing</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 13)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 13)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 14)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 14)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 15)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 15)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 16)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 16)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 17)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 17)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 18)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 18)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 19)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 19)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Answering Questions with Messy Data</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 20)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 20)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 21)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 21)} />
               </div>
             </div>
           </Collapse>
@@ -204,37 +232,37 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 2 - Basic Charting</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 22)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 22)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 23)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 23)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 24)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 24)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 3 - Charting Fundamentals</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 25)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 25)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 26)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 26)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 27)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 27)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Applied Visualizations</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 28)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 28)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 29)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 29)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 30)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 30)} />
               </div>
             </div>
           </Collapse>
@@ -260,43 +288,43 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 1 - Fundamentals of Machine Learning</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 31)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 31)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 32)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 32)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 2 - Supervised Machine Learning</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 33)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 33)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 34)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 34)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 35)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 35)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 3 - Evaluation</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 36)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 36)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 37)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 37)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Supervised Machine Learning II</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 38)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 38)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 39)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 39)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 40)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 40)} />
               </div>
             </div>
           </Collapse>
@@ -318,40 +346,40 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 1 - Working with Text</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 41)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 41)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 42)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 42)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 43)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 43)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 2 - Basic Natural Language Processing</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 44)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 44)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 45)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 45)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 3 - Classification of Text</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 46)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 46)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 47)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 47)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Topic Modeling</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 48)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 48)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 49)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 49)} />
               </div>
             </div>
           </Collapse>
@@ -371,34 +399,34 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 1 - Why Study Networks and Basics on NetworkX</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 50)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 50)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 51)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 51)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 2 - Netork Connectivity</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 52)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 52)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 53)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 53)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 3 - Influence Measures and Network Centralization</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 54)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 54)} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Network Evolution</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 55)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 55)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <RenderCard notebook={this.props.notebooks.find(notebook => notebook.id === 56)} />
+                <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 56)} />
               </div>
             </div>
           </Collapse>

@@ -6,6 +6,8 @@ This assignment requires you to complete the following tasks. Detailed instructi
 picture of the completed web page included below indicates the location within the web page that will be updated by the 
 three tasks.
 
+&nbsp;
+
 #### **Task 1**
 
 In this task you will be integrating the AboutComponent into the single page application:
@@ -14,6 +16,8 @@ In this task you will be integrating the AboutComponent into the single page app
 
 * Update the MainComponent.js file to integrate the AboutComponent into the single page application. You should be able 
 to navigate to the AboutComponent by clicking the links in the navigation bar and the footer.
+
+&nbsp;
 
 #### **Task 2**
 
@@ -26,6 +30,8 @@ information as shown in the screenshot below using the reactstrap <Media> compon
 component in the first module to render the details of a dish in the MenuComponent.
 
 * This will make available the <RenderLeader> component for use within your AboutComponent.
+
+&nbsp;
 
 #### **Task 3**
 

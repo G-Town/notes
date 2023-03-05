@@ -14,7 +14,7 @@
 
 * Add a new component named *MainComponent.js* in the components folder and update its contents as follows:
 
-```js
+```jsx
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Menu from './MenuComponent';
@@ -55,7 +55,7 @@ export default Main;
 
 * Update the *App.js* by removing the state related information, and make use of Main Component to render the UI:
 
-```js
+```jsx
 . . .
 import Main from './components/MainComponent';
 
@@ -80,7 +80,7 @@ class App extends Component {
 * Open *MenuComponent.js* and update its contents by removing the state and removing the DishdetailComponent reference, 
 and make use of the onClick supplied by MainComponent through the props to deal with the clicking of a menu item:
 
-```
+```jsx
 . . .
 
           <Card key={dish.id}
@@ -90,12 +90,12 @@ and make use of the onClick supplied by MainComponent through the props to deal 
 ```
 
 * The **DishdetailComponent** is already structured as a presentational component and hence needs no further update, 
-except wrapping the return value from render() within a <div> with the className as container.
+except wrapping the return value from render() within a \<div> with the className as container.
 
 * To print out the date for a comment in a format more suitable for human readability, you can update your 
 **renderComment** function with the code snippet shown below:
 
-```js
+```jsx
 {new Intl.DateTimeFormat('en-US',
                          {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
 ```
@@ -114,7 +114,7 @@ except wrapping the return value from render() within a <div> with the className
 
 * Open *MenuComponent.js* and update it as follows:
 
-```js
+```jsx
 import React from 'react';
 import { Card, CardImg, CardImgOverlay,
   CardTitle } from 'reactstrap';
@@ -154,7 +154,7 @@ export default Menu;
 
 * Then open *DishdetailComponent.js* and update it as follows:
 
-```js
+```jsx
 import React from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle } from 'reactstrap';
@@ -196,7 +196,7 @@ export default DishDetail;
 * First use yarn or npm to fetch **Font Awesome** and **Bootstrap Social** to the project by typing the following at 
 the prompt:
 
-```
+```powershell
 yarn add font-awesome@4.7.0
 yarn add bootstrap-social@5.1.1
 ```
@@ -204,7 +204,7 @@ yarn add bootstrap-social@5.1.1
 * Then, open *index.js* file and update it as follows to enable your application to use **Font Awesome** and 
 **Bootstrap Social**:
 
-```js
+```jsx
 . . .
 
 import 'font-awesome/css/font-awesome.css';
@@ -219,7 +219,7 @@ import 'bootstrap-social/bootstrap-social.css';
 
 * Create a new file named *HeaderComponent.js* and add the following to it:
 
-```js
+```jsx
 import React, { Component } from 'react';
 import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
 
@@ -253,7 +253,7 @@ export default Header;
 
 * Then, add another file named *FooterComponent.j*s and add the following to it:
 
-```js
+```jsx
 import React from 'react';
 
 function Footer(props) {
@@ -323,7 +323,7 @@ export default Footer;
 
 * Now we open *MainComponent.js* and update it to integrate the header and footer into our application:
 
-```js
+```jsx
 . . .
 
 import Header from './HeaderComponent';
@@ -341,7 +341,7 @@ import Footer from './FooterComponent';
 
 * Then update *App.css* to add some new CSS classes for use in our application:
 
-```json
+```js
 .row-header{
   margin:0px auto;
   padding:0px auto;
@@ -391,11 +391,13 @@ address{
 
 * First install **React Router** into your project by typing the following at the prompt:
 
-`yarn add react-router-dom@4.2.2`
+```powershell
+yarn add react-router-dom@4.2.2
+```
 
 * Then, open *App.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { BrowserRouter } from 'react-router-dom';
@@ -417,7 +419,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 * Create a new file named *HomeComponent.js* in the components folder and add the following to it:
 
-```js
+```jsx
 import React from 'react';
 
 function Home(props) {
@@ -437,7 +439,7 @@ export default Home;
 
 * Open *MainComponent.js* file and update it as follows:
 
-```js
+```jsx
 . . .
 
 import Home from './HomeComponent';
@@ -472,7 +474,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 
 * Open *HeaderComponent.js* and update its contents with the following:
 
-```js
+```jsx
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
@@ -542,7 +544,7 @@ class Header extends Component {
 
 * Then, open *FooterComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { Link } from 'react-router-dom';
@@ -571,9 +573,9 @@ import { Link } from 'react-router-dom';
 
 ##### **Integrating the Contact Component**
 
-* Add a new file named ContactComponent.js file and update its contents as follows:
+* Add a new file named *ContactComponent.js* file and update its contents as follows:
 
-```js
+```jsx
 import React from 'react';
 
 function Contact(props) {
@@ -616,9 +618,9 @@ function Contact(props) {
 export default Contact;
 ```
 
-* Update the MainComponent.js file to integrate the ContactComponent by adding in the following:
+* Update the *MainComponent.js* file to integrate the ContactComponent by adding in the following:
 
-```js
+```jsx
 . . .
 
 import Contact from './ContactComponent';
@@ -634,7 +636,7 @@ import Contact from './ContactComponent';
 
 * First update *dishes.js* file in the shared folder to update the dishes as follows:
 
-```json
+```js
 export const DISHES =
   [
     {
@@ -645,7 +647,7 @@ export const DISHES =
     label:'Hot',
     price:'4.99',
     featured: true,
-    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe 
+    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe \
                 vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                    
     },
     {
@@ -656,7 +658,7 @@ export const DISHES =
     label:'',
     price:'1.99',
     featured: false,
-    description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy 
+    description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy \
                 tamarind sauce'
     },
     {
@@ -677,7 +679,7 @@ export const DISHES =
     label:'',
     price:'2.99',
     featured: false,
-    description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian 
+    description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian \
                 cardamoms'
     }
   ];
@@ -686,7 +688,7 @@ export const DISHES =
 * Now add a new file named *comments.js* to the shared folder and update it as follows. We are now moving the comments 
 about the dishes into its own file:
 
-```json
+```js
 export const COMMENTS = 
 [
   {
@@ -852,9 +854,9 @@ export const COMMENTS =
 ];
 ```
 
-* Next add a new file named promotions.js file to the shared folder and update its contents as follows:
+* Next add a new file named *promotions.js* file to the shared folder and update its contents as follows:
 
-```json
+```js
 export const PROMOTIONS = [
   {
     id: 0,
@@ -863,16 +865,16 @@ export const PROMOTIONS = [
     label: 'New',
     price: '19.99',
     featured: true,
-    description: 'Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, 
-                  six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 
+    description: 'Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, \
+                  six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 \
                   per person'
   }
   ];
 ```
 
-* Next add a new file named leaders.js file to the shared folder and update its contents as follows:
+* Next add a new file named *leaders.js* file to the shared folder and update its contents as follows:
 
-```json
+```js
 export const LEADERS = [
   {
     id: 0,
@@ -881,7 +883,11 @@ export const LEADERS = [
     designation: 'Chief Epicurious Officer',
     abbr: 'CEO',
     featured: false,
-    description: 'Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.'
+    description: 'Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous \
+    journey to the shores of America with the intention of giving their children the best future. His mother\'s wizardy \
+    in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was \
+    his first inspiration to create the fusion cuisines for which The Frying Pan became well known. He brings his zeal \
+    for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.'
   },
   {
     id: 1,
@@ -890,7 +896,10 @@ export const LEADERS = [
     designation: 'Chief Food Officer',
     abbr: 'CFO',
     featured: false,
-    description: 'Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and everything that stays, pays!'
+    description: 'Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established \
+    family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him \
+    great appreciation for varieties of food sources. As he puts it in his own words, Everything that runs, wins, and \
+    everything that stays, pays!'
   },
   {
     id: 2,
@@ -899,7 +908,9 @@ export const LEADERS = [
     designation: 'Chief Taste Officer',
     abbr: 'CTO',
       featured: false,
-    description: 'Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, You click only if you survive my lick.'
+    description: 'Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every \
+    dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does \
+    not meet his exacting standards. He lives by his motto, You click only if you survive my lick.'
   },
   {
     id: 3,
@@ -908,14 +919,16 @@ export const LEADERS = [
     designation: 'Executive Chef',
     abbr: 'EC',
     featured: true,
-    description: 'Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!'
+    description: 'Award winning three-star Michelin chef with wide International experience having worked closely with \
+    whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, \
+    Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!'
   }
 ];
 ```
 
-* Now update the HomeComponent.ts file to fetch and display the featured dish, promotion and leader as follows:
+* Now update the *HomeComponent.js* file to fetch and display the featured dish, promotion and leader as follows:
 
-```js
+```jsx
 import React from 'react';
 import { Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle} from 'reactstrap';
@@ -956,9 +969,9 @@ function Home(props) {
 export default Home;
 ```
 
-* Next, update MainComponent.js as follows:
+* Next, update *MainComponent.js* as follows:
 
-```js
+```jsx
 . . .
 
 import { COMMENTS } from '../shared/comments';
@@ -999,9 +1012,10 @@ class Main extends Component {
 
 ##### **Updating to Use Parameters on Routes**
 
-* Open MenuComponent.js and add the following changes to it to enable the information about the selected dish to be passed to the DishdetailComponent:
+* Open *MenuComponent.js* and add the following changes to it to enable the information about the selected dish to be 
+passed to the DishdetailComponent:
 
-```js
+```jsx
 . . .
 
 import { Card, CardImg, CardImgOverlay,
@@ -1044,9 +1058,9 @@ import { Link } from 'react-router-dom';
 . . .
 ```
 
-* Open MainComponent.js and update it as follows:
+* Open *MainComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 
@@ -1068,9 +1082,9 @@ import { Link } from 'react-router-dom';
 
 ##### **Updating DishDetail Component**
 
-* Open DishdetailComponent.js and update it as follows:
+* Open *DishdetailComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { Card, CardImg, CardText, CardBody,
@@ -1110,9 +1124,9 @@ import { Link } from 'react-router-dom';
 
 ##### **Adding Breadcrumbs to ContactComponent**
 
-* Open ContactComponent.js and add Breadcrumbs to it as follows:
+* Open *ContactComponent.js* and add Breadcrumbs to it as follows:
 
-```js
+```jsx
 . . .
 
 import { Breadcrumb, BreadcrumbItem } from 'reactstrap';

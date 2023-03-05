@@ -1,4 +1,4 @@
-```js
+```jsx
 import React from 'react';
 import { Card, CardBody, CardHeader, Media, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';

@@ -23,11 +23,11 @@ function RenderCard({ item, page }) {
 function Home(props) {
   return (
     <>
-      <div className="bg-home p-5">
-        <div className="container-fluid text-white box p-5">
+      <div className="bg-home py-5">
+        <div className="container-fluid text-white box py-5">
           <h3>Welcome to Gerry Arriaga's Website</h3>
-          <div className="row">
-            <div className="col-12 col-md px-5">
+          <div className="row justify-content-center">
+            <div className="col-12 col-md-8">
               <p>
                 <br />- profile<br />
                 As a student of Data Science, Machine Learning, and Web Development I maintain this site as a
@@ -45,10 +45,10 @@ function Home(props) {
           </div>
           <hr />
           <div className="row d-flex align-items-center justify-content-center">
-            <div className="col-12 col-md-6 col-xxl-3 d-flex justify-content-center my-5">
+            <div className="col-12 col-md-6 col-xxl-4 d-flex justify-content-center my-5">
               <RenderCard item={props.reditem} page="/ApplDataSci-UMich" />
             </div>
-            <div className="col col-8 col-md-6 col-xxl-8 d-flex justify-content-center my-5">
+            <div className="col-8 col-md-6 col-xxl-8 d-flex justify-content-center my-5">
               <p>The courses in this University of Michigan specialization introduce learners to data science through
                 the Python programming language. This skills-based specialization is intended for learners who have a
                 basic Python or programming background, and want to apply statistical, machine learning, information
@@ -58,7 +58,7 @@ function Home(props) {
           </div>
           <hr />
           <div className="row d-flex align-items-center justify-content-center">
-            <div className="col col-8 col-md-6 col-xxl-8 d-flex justify-content-center my-5">
+            <div className="col-8 col-md-6 col-xxl-8 d-flex justify-content-center my-5">
               <p>This Specialization from leading researchers at the University of Washington introduces you to the
                 exciting, high-demand field of Machine Learning. Through a series of practical case studies, you will
                 gain applied experience in major areas of Machine Learning including Prediction, Classification,
@@ -75,7 +75,7 @@ function Home(props) {
             <div className="col-12 col-md-6 col-xxl-3 d-flex justify-content-center my-5">
               <RenderCard item={props.greenitem} page="/FSWebDev-HKST" />
             </div>
-            <div className="col col-8 col-md-6 col-xxl-8 d-flex justify-content-center my-5">
+            <div className="col-8 col-md-6 col-xxl-8 d-flex justify-content-center my-5">
               <p>Learn front-end and hybrid mobile development, with server-side support, for implementing a
                 multi-platform solution. The first two courses in this Specialization cover front-end frameworks:
                 Bootstrap 4 and React. On the server side, you’ll learn to implement NoSQL databases using MongoDB,

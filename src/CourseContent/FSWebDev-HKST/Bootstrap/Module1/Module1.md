@@ -12,11 +12,13 @@
 
 ##### **Downloading  and installing Git**
 
-* To install Git on your computer, go to https://git-scm.com/downloads to download the Git installer for your specific computing platform. 
+* To install Git on your computer, go to https://git-scm.com/downloads to download the Git installer for your specific 
+computing platform. 
 
 * Then, follow the installation steps as you install Git using the installer.
 
-* You can find more details about installing Git at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git. This document lists several ways of installing Git on various platforms.
+* You can find more details about installing Git at https://git-scm.com/book/en/v2/Getting-Started-Installing-Git. This 
+document lists several ways of installing Git on various platforms.
 
 * Installing some of the GUI tools like GitHub Desktop will also install Git on your computer.
 
@@ -30,21 +32,27 @@
 
 * Open a cmd window or terminal on your computer.
 
-* Check to make sure that Git is installed and available on the command line, by typing the following at the command prompt:
+* Check to make sure that Git is installed and available on the command line, by typing the following at the command 
+prompt:
 
 * To configure your user name to be used by Git, type the following at the prompt:
 
-`git --version`
-
-`git config --global user.name "Your Name"`
+```powershell
+git --version
+git config --global user.name "Your Name"
+```
 
 * To configure your email to be used by Git, type the following at the prompt:
 
-`git config --global user.email <your email address>`
+```powershell
+git config --global user.email <your email address>
+```
 
 * You can check your default Git global configuration, you can type the following at the prompt:
 
-`git config --list`
+```powershell
+git config --list
+```
 
 &nbsp;
 
@@ -56,7 +64,7 @@
 
 &nbsp;
 
-* At a convenient location on your computer, create a folder named **git-test**.
+* At a convenient location on your computer, create a folder named *git-test*.
 
 * Open this git-test folder in your favorite editor.
 
@@ -77,9 +85,12 @@
 
 ##### **Initializing the folder as a Git repository**
 
-* Go to the git-test folder in your cmd window/terminal and type the following at the prompt to initialize the folder as a Git repository:
+* Go to the git-test folder in your cmd window/terminal and type the following at the prompt to initialize the folder as 
+a Git repository:
 
-`git init`
+```powershell
+git init
+```
 
 &nbsp;
 
@@ -87,7 +98,9 @@
 
 * Type the following at the prompt to check your Git repository's status:
 
-`git status`
+```powershell
+git status
+```
 
 &nbsp;
 
@@ -95,7 +108,9 @@
 
 * To add files to the staging area of your Git repository, type:
 
-`git add .`
+```powershell
+git add .
+```
 
 &nbsp;
 
@@ -103,7 +118,9 @@
 
 * To commit the current staging area to your Git repository, type:
 
-`git commit -m "first commit"`
+```powershell
+git commit -m "first commit"
+```
 
 &nbsp;
 
@@ -111,9 +128,11 @@
 
 * To check the log of the commits to your Git repository, type
 
-`git log --oneline`
+```powershell
+git log --oneline
+```
 
-* Now, modify the index.html file as follows:
+* Now, modify the *index.html* file as follows:
 
 ```html
 <!DOCTYPE html>
@@ -127,13 +146,14 @@
 </html>
 ```
 
-* Add a sub-folder named templates to your git-test folder, and then add a file named test.html to the templates folder. Then set the contents of this file to be the same as the index.html file above.
+* Add a sub-folder named templates to your git-test folder, and then add a file named *test.html* to the templates 
+folder. Then set the contents of this file to be the same as the *index.html* file above.
 
 * Then check the status and add all the files to the staging area.
 
 * Then do the second commit to your repository
 
-* Now, modify the index.html file as follows:
+* Now, modify the *index.html* file as follows:
 
 ```html
 <!DOCTYPE html>
@@ -154,23 +174,31 @@
 
 ##### **Checking out a file from an earlier commit**
 
-* To check out the index.html from the second commit, find the number of the second commit using the git log, and then type the following at the prompt:
+* To check out the index.html from the second commit, find the number of the second commit using the git log, and then 
+type the following at the prompt:
 
-`git checkout <second commit's number> index.html`
+```powershell
+git checkout <second commit's number> index.html
+```
 
 &nbsp;
 
 ##### **Resetting the Git repository**
 
-* To discard the effect of the previous operation and restore index.html to its state at the end of the third commit, type:
+* To discard the effect of the previous operation and restore *index.html* to its state at the end of the third commit, 
+type:
 
-`git reset HEAD index.html`
+```powershell
+git reset HEAD index.html
+```
 
 * Then type the following at the prompt:
 
-`git checkout -- index.html`
+```powershell
+git checkout -- index.html
+```
 
-* You can also use *git reset* to reset the staging area to the last commit without disturbing the working directory.
+* You can also use **git reset** to reset the staging area to the last commit without disturbing the working directory.
 
 &nbsp;
 
@@ -186,7 +214,8 @@
 
 * Sign up for an account either at Bitbucket (https://bitbucket.org) or GitHub (https://github.com).
 
-* Then set up an online Git repository named git-test. Note the URL of your online Git repository. Note that private repositories on GitHub requires a paid account, and is not available for free accounts.
+* Then set up an online Git repository named git-test. Note the URL of your online Git repository. Note that private 
+repositories on GitHub requires a paid account, and is not available for free accounts.
 
 &nbsp;
 
@@ -194,7 +223,9 @@
 
 * At the prompt, type the following to set up your local repository to link to your online Git repository:
 
-`git remote add origin <repository URL>`
+```powershell
+git remote add origin <repository URL>
+```
 
 &nbsp;
 
@@ -202,7 +233,9 @@
 
 * At the prompt, type the following to push the commits to the online repository:
 
-`git push -u origin master`
+```powershell
+git push -u origin master
+```
 
 &nbsp;
 
@@ -210,7 +243,9 @@
 
 * To clone an online repository to your computer, type the following at the prompt:
 
-`git clone <repository URL>`
+```powershell
+git clone <repository URL>
+```
 
 &nbsp;
 
@@ -243,9 +278,11 @@ with admin privileges.
 * To ensure that your NodeJS setup is working correctly, type the following at the command prompt to check for the 
 version of Node and NPM
 
-`node -v`
+```powershell
+node -v
 
-`npm -v`
+npm -v
+```
 
 &nbsp;
 
@@ -261,7 +298,9 @@ version of Node and NPM
 
 * At the command prompt in your project folder, type:
 
-`npm init`
+```powershell
+npm init
+```
 
 * Follow along the prompts and answer the questions as follows: accept the default values for most of the entries, 
 except set the entry point to *index.html*
@@ -270,15 +309,17 @@ except set the entry point to *index.html*
 
 ##### Installing an NPM Module
 
-* Install an NPM module, **lite-server**, that allows you to run a Node.js based development web server and serve up 
+* Install an NPM module, **lite-server**, that allows you to run a **Node.js** based development web server and serve up 
 your project files. To do this, type the following at the prompt:
 
-`npm install lite-server --save-dev`
+```
+npm install lite-server --save-dev
+```
 
 * Next, open *package.json* in your editor and modify it as shown below. Note the addition of two lines, line 7 and 
 line 9.
 
-```json
+```js
 {
   "name": "git-test",
   "version": "1.0.0",
@@ -304,7 +345,9 @@ line 9.
 
 * Next, start the development server by typing the following at the prompt:
 
-`npm start`
+```powershell
+npm start
+```
 
 * This should open your *index.html* page in your default browser.
 
@@ -316,7 +359,9 @@ to reflect the changes.
 * Next, create a file in your project directory named *.gitignore* (**Note**: the name starts with a period). Then, add 
 the following to the *.gitignore* file:
 
-`node_modules`
+```txt
+node_modules
+```
 
 &nbsp;
 
@@ -339,14 +384,18 @@ the *conFusion* folder.
 * Open a cmd window/terminal and move to the *conFusion* folder.
 At the prompt type:
 
-`npm install`
+```powershell
+npm install
+```
 
 * This will install the lite-server node module to your project.
 
 * Next, initialize a Git repository in the project folder, and then set up a *.gitignore* file with the contents as 
 shown below:
 
-`node_modules`
+```txt
+node_modules
+```
 
 &nbsp;
 
@@ -356,13 +405,15 @@ shown below:
 Popper.js as shown below since Bootstrap 4 depends on these two. At the prompt, type the following to fetch Bootstrap 
 files to your project folder:
 
-`npm install bootstrap@4.0.0-alpha.6 --save`
-`npm install jquery@3.3.1 popper.js@1.12.9 --save`
+```powershell
+npm install bootstrap@4.0.0-alpha.6 --save
+npm install jquery@3.3.1 popper.js@1.12.9 --save
+```
 
 * This will fetch the Bootstrap files and store is in your node_modules folder in a bootstrap folder. The 
 bootstrap->dist folder contains the precompiled Bootstrap CSS and JS files for use within your project.
 
-* Open your project folder in your editor, and then open the index.html file in the *conFusion* folder. This is your 
+* Open your project folder in your editor, and then open the *index.html* file in the *conFusion* folder. This is your 
 starting web page for the project. We have already created the web page with some content to get you started. We will 
 use Bootstrap to style this web page, and learn Bootstrap features, classes and components along the way.
 
@@ -374,7 +425,7 @@ default browser.
 ##### **Getting your Web page Bootstrap ready**
 
 * Open the *index.html* file in your favourite text editor. If you are using Visual Studio Code, Brackets, Sublime Text 
-or similar editors, you can open the project folder in the editor and then view index.html.
+or similar editors, you can open the project folder in the editor and then view *index.html*.
 
 * Insert the following code in the **<head>** of *index.html* file before the title.
 
@@ -419,7 +470,9 @@ mobile device screens first and then work upwards to larger screen sizes. The st
 media queries. We have already added the support for media queries in the last lesson, where we added this line to the 
 head:
 
-`<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">`
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+```
 
 The viewport meta tag ensures that the screen width is set to the device width and the content is rendered with this 
 width in mind. This brings us to the second issue, designing the websites to be responsive to the size of the viewport. 
@@ -440,7 +493,9 @@ The alternative is to use the container-fluid class to make the content automati
 screen. We will discuss further about this when we discuss the Bootstrap grid system in the next lecture. Add the 
 container class to the first div right after the **</header>** in the file as follows.
 
-`<div class="container"> ...`
+```html
+<div class="container"> ...
+```
 
 &nbsp;
 
@@ -449,7 +504,9 @@ container class to the first div right after the **</header>** in the file as fo
 * Let us now add the class row to the first-level inner *div* elements inside the container. This organizes the page 
 into rows of content. In the next exercise, we will see how we can add other classes to the rows.
 
-` <div class="row"> ...`
+```html
+  <div class="row"> ...
+```
 
 &nbsp;
 
@@ -459,7 +516,9 @@ into rows of content. In the next exercise, we will see how we can add other cla
 component named Jumbotron. A jumbotron is used to showcase key content on a website. In this case we are using it to 
 highlight the name of the restaurant.
 
-` <header class="jumbotron"> ... `
+```html
+<header class="jumbotron"> ...
+```
 
 * In the header add a **container** class to the first inner div and a row class to the second inner div.
 
@@ -519,9 +578,11 @@ to the web page. For extra small screens, the default stacked layout works best.
       <div class="col col-sm order-sm-first col-md"> ... </div>
 ```
 
-* For the div containing the **<ul>** with the site links, update the class as follows:
+* For the div containing the **\<ul>** with the site links, update the class as follows:
 
-`<div class="col-5 offset-1 col-sm-2">`
+```html
+<div class="col-5 offset-1 col-sm-2">
+```
 
 &nbsp;
 
@@ -544,7 +605,9 @@ this, you can update the two div classes above as follows:
 list style *list-unstyled* to display the links at the bottom of the page without the bullets. To do this, go to the 
 links in the footer and update the ul as follows
 
-`          <ul class="list-unstyled"> ... </ul>`
+```html
+          <ul class="list-unstyled"> ... </ul>
+```
 
 &nbsp;
 
@@ -573,9 +636,11 @@ contents. Add the following CSS code to the file:
 }
 ```
 
-* Include the *styles.css* file into the head of the index.html file as follows:
+* Include the *styles.css* file into the head of the *index.html* file as follows:
 
-`    <link href="css/styles.css" rel="stylesheet">`
+```html
+    <link href="css/styles.css" rel="stylesheet">
+```
 
 * Then add these classes to the corresponding rows in the *index.html* file as follows. See the difference in the 
 *index.html* file in the browser. The first one is for the row in the **<header>**, the next three for the rows in the 
@@ -616,11 +681,15 @@ address{
 
 * In the content section, update all the rows as follows:
 
-`    <div class="row row-content align-items-center">`
+```html
+    <div class="row row-content align-items-center">
+```
 
 * In the footer, update the third column div that contains the social media links as follows:
 
-`        <div class="col-12 col-sm-4 align-self-center">`
+```html
+        <div class="col-12 col-sm-4 align-self-center">
+```
 
 &nbsp;
 
@@ -635,4 +704,6 @@ address{
 
 * Update the inner div containing the social media links as follows:
 
-`          <div class="text-center">`
+```html
+          <div class="text-center">
+```

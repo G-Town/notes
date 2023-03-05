@@ -28,14 +28,18 @@ works, right out of the box. It already follows the best practices suggested by 
 
 * To install create-react-app globally, type the following at the prompt:
 
-`yarn global add create-react-app@1.5.2`
+```powershell
+yarn global add create-react-app@1.5.2
+```
 
 Use sudo on a Mac and Linux. Alternately you can use npm, by typing "npm install -g create-react-app@1.5.2".
 
 * This will make the command line tool for creating React applications. To learn more about the various commands that 
 this CLI provides, type at the prompt:
 
-`create-react-app --help`
+```powershell
+create-react-app --help
+```
 
 &nbsp;
 
@@ -45,23 +49,29 @@ this CLI provides, type at the prompt:
 
 * Then type the following at the prompt to create a new React application named confusion:
 
-`create-react-app confusion`
+```powershell
+create-react-app confusion
+```
 
 * This should create a new folder named confusion within your React folder and create the React application in that 
 folder.
 
 * Move to the confusion folder and type the following at the prompt:
 
-`yarn start`
+```powershell
+yarn start
+```
 
 * This will compile the project and then open a tab in your default browser at the address 
 *http://<Your Computer's Name>:3000.*
 
 * You can initialize your project to be a Git repository by typing the following commands at the prompt:
 
-`git init`
-`git add .`
-`git commit -m "Initial Setup"`
+```powershell
+git init
+git add .
+git commit -m "Initial Setup"
+```
 
 Thereafter you can set up an online Git repository and synchronize your project to the online repository. Make sure that 
 the online Git repository is a private repository.
@@ -80,9 +90,11 @@ the online Git repository is a private repository.
 
 * To configure your project to use reactstrap, type the following at the prompt to install reactstrap, and Bootstrap 4:
 
-`yarn add bootstrap@4.0.0`
-`yarn add reactstrap@5.0.0`
-`yarn add react-popper@0.9.2`
+```powershell
+yarn add bootstrap@4.0.0
+yarn add reactstrap@5.0.0
+yarn add react-popper@0.9.2
+```
 
 Note: You can also install the same using npm using the "npm install <package> --save" option if you are using npm 
 instead of yarn.
@@ -91,9 +103,9 @@ instead of yarn.
 
 ##### **Configure to use Bootstrap 4**
 
-* Next, open index.js file in the src folder and add the following line into the imports:
+* Next, open *index.js* file in the src folder and add the following line into the imports:
 
-```js
+```jsx
 . . .
 import 'bootstrap/dist/css/bootstrap.min.css';
 . . .
@@ -103,9 +115,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 ##### **Adding a Navigation Bar**
 
-* Open App.js in the src folder and update it as follows:
+* Open *App.js* in the src folder and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { Navbar, NavbarBrand } from 'reactstrap';
@@ -143,12 +155,12 @@ class App extends Component {
 folder. Move the resulting images folder containing some PNG files to the React project's public/assets folder. These 
 image files will be useful for our exercises.
 
-* Next, add a new folder named components in the src folder, and create a new file named MenuComponent.js in this 
+* Next, add a new folder named components in the src folder, and create a new file named *MenuComponent.js* in this 
 folder.
 
-* Add the following code to MenuComponent.js:
+* Add the following code to *MenuComponent.js*:
 
-```js
+```jsx
 import React, { Component } from 'react';
 import { Media } from 'reactstrap';
 
@@ -232,7 +244,7 @@ class Menu extends Component {
 export default Menu;
 ```
 
-* Next, open App.js file and update it as follows:
+* Next, open *App.js* file and update it as follows:
 
 ```html
 . . .
@@ -246,16 +258,16 @@ import Menu from './components/MenuComponent';
     . . .
 ```
 
-* Open App.css file and delete all its contents.
+* Open *App.css* file and delete all its contents.
 
 &nbsp;
 
 ##### **Updating the Menu Component**
 
-* Open MenuComponent.js and update its contents as follows. Note that we have removed the dishes variable from the state 
+* Open *MenuComponent.js* and update its contents as follows. Note that we have removed the dishes variable from the state 
 of the component, and updated it to use the Card:
 
-```js
+```jsx
  . . .
  
 import { Card, CardImg, CardImgOverlay, CardText, CardBody,
@@ -329,7 +341,7 @@ class Menu extends Component {
 download the *dishes.js* file given above in the Exercise Resources and move it to the shared folder. Make sure the file 
 is named *dishes.js*):
 
-```json
+```jsx
 export const DISHES = [
   {
     id: 0,
@@ -520,9 +532,9 @@ export const DISHES = [
 ];
 ```
 
-* Open App.js and update it as follows:
+* Open *App.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { DISHES } from './shared/dishes';

@@ -1,5 +1,5 @@
 dishes.js
-```json
+```js
 export const DISHES = [
   {
     id: 0,
@@ -9,7 +9,7 @@ export const DISHES = [
     label:'Hot',
     price:'4.99',
     featured: true,
-    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, 
+    description:'A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, \
                 ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.'                    
   },
   {
@@ -20,7 +20,7 @@ export const DISHES = [
     label:'',
     price:'1.99',
     featured: false,
-    description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy 
+    description:'Deep fried Zucchini coated with mildly spiced Chickpea flour batter accompanied with a sweet-tangy \
                 tamarind sauce'
   },
   {
@@ -41,14 +41,14 @@ export const DISHES = [
     label:'',
     price:'2.99',
     featured: false,
-    description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with 
+    description:'A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with \
                 Indian cardamoms'
   }
   ];
 ```
 
 promotions.js
-```json
+```js
 export const PROMOTIONS = [
   {
     id: 0,
@@ -65,7 +65,7 @@ export const PROMOTIONS = [
 ```
 
 leaders.js
-```json
+```js
 export const LEADERS = [
   {
     id: 0,
@@ -74,11 +74,11 @@ export const LEADERS = [
     designation: 'Chief Epicurious Officer',
     abbr: 'CEO',
     featured: false,
-    description: "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey 
-                  to the shores of America with the intention of giving their children the best future. His mother's 
-                  wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the 
-                  supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became 
-                  well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural 
+    description: "Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey \
+                  to the shores of America with the intention of giving their children the best future. His mother's \
+                  wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the \
+                  supermarket, was his first inspiration to create the fusion cuisines for which The Frying Pan became \
+                  well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural \
                   culinary connections."
   },
   {
@@ -88,9 +88,9 @@ export const LEADERS = [
     designation: 'Chief Food Officer',
     abbr: 'CFO',
       featured: false,
-    description: 'Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established 
-                  family tradition in farming and produce. His experiences growing up on a farm in the Australian 
-                  outback gave him great appreciation for varieties of food sources. As he puts it in his own words, 
+    description: 'Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established \
+                  family tradition in farming and produce. His experiences growing up on a farm in the Australian \
+                  outback gave him great appreciation for varieties of food sources. As he puts it in his own words, \
                   Everything that runs, wins, and everything that stays, pays!'
   },
   {
@@ -100,8 +100,8 @@ export const LEADERS = [
     designation: 'Chief Taste Officer',
     abbr: 'CTO',
       featured: false,
-    description: 'Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish 
-                  that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish 
+    description: 'Blessed with the most discerning gustatory sense, Agumbe, our CFO, personally ensures that every dish \
+                  that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish \
                   does not meet his exacting standards. He lives by his motto, You click only if you survive my lick.'
   },
   {
@@ -111,16 +111,16 @@ export const LEADERS = [
     designation: 'Executive Chef',
     abbr: 'EC',
     featured: true,
-    description: 'Award winning three-star Michelin chef with wide International experience having worked closely with 
-                  whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion 
-                  experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning 
+    description: 'Award winning three-star Michelin chef with wide International experience having worked closely with \
+                  whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion \
+                  experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning \
                   hit! Amma Mia!'
   }
 ];
 ```
 
 comments.js
-```json
+```js
 export const COMMENTS = [
   {
     id: 0,

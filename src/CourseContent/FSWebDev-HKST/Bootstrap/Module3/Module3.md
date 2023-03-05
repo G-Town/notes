@@ -38,11 +38,11 @@ the restaurant.
         </ul>
 ```
 
-Note the use of the **<ul>** tag with the nav and *nav-tabs* classes to set up the tab navigation. Each list item within 
-the list acts as the tab element. Within each list item, note that we set up the **<a>** tags with the *href* pointing to 
-the *id* of the tab pane of content to be introduced later. Also note that the **<a>** tag contains the *data-toggle=tab* 
-attribute. The first list element's **<a>** tag contains the class active. This tab will be the open tab when we view the 
-web page. We can switch to the other tabs using the tabbed navigation that we just set up.
+Note the use of the **\<ul>** tag with the **nav** and **nav-tabs** classes to set up the tab navigation. Each list item 
+within the list acts as the tab element. Within each list item, note that we set up the **\<a>** tags with the **href** 
+pointing to the **id** of the tab pane of content to be introduced later. Also note that the **\<a>** tag contains the 
+**data-toggle=tab** attribute. The first list element's **\<a>** tag contains the class active. This tab will be the 
+open tab when we view the web page. We can switch to the other tabs using the tabbed navigation that we just set up.
 
 &nbsp;
 
@@ -68,11 +68,11 @@ will enclose the entire content into a div element with the class tab-content as
           </div>
 ```
 
-Note the use of the *tab-pane*, *fade*, *show*, and *active* classes and with *peter* as the id. This is the same id 
-used as the *href* in the **<a>** link in the navigation.
+Note the use of the **tab-pane**, **fade**, **show**, and **active** classes and with **peter** as the id. This is the same id 
+used as the **href** in the **\<a>** link in the navigation.
 
 * The remaining content is also similarly enclosed inside appropriate divs with the correct ids and the classes 
-specified as above. Only the first tab pane will have the *show* and *active* classes specified to indicate that the 
+specified as above. Only the first tab pane will have the **show** and **active** classes specified to indicate that the 
 content should be visible on the web page by default.
 
 &nbsp;
@@ -105,9 +105,9 @@ navigation element to give a clean tab like appearance.
 
 ##### **Converting Tabs to Accordion**
 
-* First delete the **<ul>** class that was introduced for the tabbed navigation
+* First delete the **\<ul>** class that was introduced for the tabbed navigation
 
-* Then the turn the *tab-content* div into a *accordion div*. Use the code structure as shown below:
+* Then the turn the **tab-content** div into a **accordion div**. Use the code structure as shown below:
 
 ```html
           <div id="accordion">
@@ -115,7 +115,8 @@ navigation element to give a clean tab like appearance.
           </div>
 ```
 
-* Then, convert the first tab-pane into a card such that the name appears as a card heading, and the **<p>** will be in the card body. Use the structure of the code as shown below:
+* Then, convert the first tab-pane into a card such that the name appears as a card heading, and the **\<p>** will be in 
+the card body. Use the structure of the code as shown below:
 
 ```html
           <div class="card">
@@ -197,7 +198,7 @@ shown in the code structure below:
 ##### **Adding a Tooltip**
 
 * Let us now switch to the *index.html* page. We will now add a tooltip to this page. The tooltip will be added to the 
-"Reserve Table" button that is in the jumbotron. We will update the **<a>** tag for the button as follows:
+"Reserve Table" button that is in the jumbotron. We will update the **\<a>** tag for the button as follows:
 
 ```html
           <a role="button" class="btn btn-block nav-link btn-warning"
@@ -205,7 +206,7 @@ shown in the code structure below:
               data-placement="bottom" href="#reserveform">Reserve Table</a>
 ```
 
-As you can see from the code, we add a **data-toggle**, **data-placement** and a **title** attribute to the **<a>** tag 
+As you can see from the code, we add a **data-toggle**, **data-placement** and a **title** attribute to the **\<a>** tag 
 in order to introduce a tooltip.
 
 * The tooltip needs to be activated by adding a small Javascript code to the bottom of the page as follows:
@@ -266,7 +267,7 @@ navbar at the top of the page.
 ```
 
 * Next we introduce another link on the right side of the navbar in order to trigger the display of the modal. To do 
-this, add the following code in the navbar after the **</ul>**:
+this, add the following code in the navbar after the **\</ul>**:
 
 ```html
         <span class="navbar-text">
@@ -276,7 +277,7 @@ this, add the following code in the navbar after the **</ul>**:
         </span>
 ```
 
-We are introducing another link to the right of the navbar using the navbar-text. This contains a link with an <a> tag 
+We are introducing another link to the right of the navbar using the navbar-text. This contains a link with an **\<a>** tag 
 with the data-toggle="modal" and data-target="#loginModal" attributes.
 
 &nbsp;

@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 function RenderMDCard({ page }) {
   return (
     <Card style={{ width: '15rem' }} className="bg-dark">
-      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1661286686270316.jpg"} alt={page.module} />
+      <CardImg height='160' src={page.image} alt={page.module} />
       <CardBody className="text-light">
         <CardTitle>{page.title}</CardTitle>
         <CardSubtitle></CardSubtitle>
@@ -22,7 +22,7 @@ function RenderMDCard({ page }) {
 function RenderHTMLCard({ page }) {
   return (
     <Card style={{ width: '15rem' }} className="bg-dark">
-      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/1661286686270316.jpg"} alt={page.module} />
+      <CardImg height='160' src={page.image} alt={page.module} />
       <CardBody className="text-light">
         <CardTitle>{page.title}</CardTitle>
         <CardSubtitle></CardSubtitle>

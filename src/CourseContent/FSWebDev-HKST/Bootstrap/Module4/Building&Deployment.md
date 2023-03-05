@@ -14,7 +14,9 @@
 
 * First, we install two NPM packages *onchange* and *parallelshell* as follows:
 
-`npm install --save-dev onchange@3.3.0 parallelshell@3.0.2`
+```powershell
+npm install --save-dev onchange@3.3.0 parallelshell@3.0.2
+```
 
 * Then, add the following two script items to *package.json* if you are doing the exercise on a MacOS computer or a 
 Linux computer:
@@ -34,12 +36,16 @@ the above:
 
 * You will also update the start script as follows:
 
-`"start": "npm run watch:all",`
+```js
+"start": "npm run watch:all",
+```
 
 * Then, type the following at the prompt to start watching for changes to the SCSS file, compile it to CSS, and run the 
 server:
 
-`npm start`
+```powershell
+npm start
+```
 
 * Now, whenever you make any changes to styles.scss file, it will automatically be compiled to the corresponding css 
 file.
@@ -50,11 +56,15 @@ file.
 
 * Install the *rimraf* npm module by typing the following at the prompt:
 
-`npm install --save-dev rimraf@2.6.2`
+```powershell
+npm install --save-dev rimraf@2.6.2
+```
 
 * Then, set up the following script:
 
-`  "clean": "rimraf dist",`
+```js
+  "clean": "rimraf dist",
+```
 
 &nbsp;
 
@@ -63,13 +73,17 @@ file.
 * Your project uses font-awesome fonts. These need to be copied to the distribution folder. To help us do this, install 
 the *copyfiles* NPM module globally as follows:
 
-`npm -g install copyfiles@2.0.0`
+```powershell
+npm -g install copyfiles@2.0.0
+```
 
 Remember to use *sudo* on mac and Linux.
 
 * Then set up the following script:
 
-`  "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",`
+```js
+  "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+```
 
 &nbsp;
 
@@ -78,16 +92,22 @@ Remember to use *sudo* on mac and Linux.
 * We use the *imagemin-cli* NPM module to help us to compress our images to reduce the size of the images being used in 
 our project. Install the *imagemin-cli* module as follows:
 
-`npm -g install imagemin-cli@3.0.0`
+```powershell
+npm -g install imagemin-cli@3.0.0
+```
 
 Remember to use *sudo* on mac and Linux. **NOTE:** Some students have encountered issues with imagemin-cli not 
 installing its plugins due to issues with global permissions on Mac. In that case try
 
-`sudo npm install -g imagemin-cli@3.0.0 --unsafe-perm=true --allow-root`
+```powershell
+sudo npm install -g imagemin-cli@3.0.0 --unsafe-perm=true --allow-root
+```
 
 * Then set up the following script:
 
-`  "imagemin": "imagemin img/* --out-dir='dist/img'",`
+```js
+  "imagemin": "imagemin img/* --out-dir='dist/img'",
+```
 
 &nbsp;
 
@@ -95,24 +115,26 @@ installing its plugins due to issues with global permissions on Mac. In that cas
 
 * Open *.gitignore* and update it as follows. We do not want the dist folder to be checked into the git repository.
 
-```
+```txt
 node_modules
 dist
 ```
 
 * Then, install the *usemin-cli*, *cssmin*, *uglifyjs* and *htmlmin* NPM packages as follows:
 
-`npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7`
+```powershell
+npm install --save-dev usemin-cli@0.5.1 cssmin@0.4.3 uglifyjs@2.4.11 htmlmin@0.0.7
+```
 
-* Add the following two scripts to the package.json file:
+* Add the following two scripts to the *package.json* file:
 
-```json
+```js
   "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin 
             -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
   "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
 ```
 
-* Open index.html and surround the css links inclusion code as follows:
+* Open *index.html* and surround the css links inclusion code as follows:
 
 ```html
   <!-- build:css css/main.css -->
@@ -140,7 +162,9 @@ dist
 
 * To build the distribution folder, you can type the following at the prompt:
 
-`npm run build`
+```powershell
+npm run build
+```
 
 * This will build the dist folder containing the files that are a self-contained version of your project. You can now 
 copy the contents of this folder to a web server that hosts your website.
@@ -159,14 +183,18 @@ copy the contents of this folder to a web server that hosts your website.
 
 * At the command prompt, type the following to install Grunt command-line interface (CLI):
 
-`npm install -g grunt-cli@1.2.0`
+```powershell
+npm install -g grunt-cli@1.2.0
+```
 
 This will install the Grunt CLI globally so that you can use them in all projects.
 
 * Next install Grunt to use within your project. To do this, go to the *conFusion* folder and type the following at the 
 prompt:
 
-`npm install grunt@1.0.2 --save-dev`
+```powershell
+npm install grunt@1.0.2 --save-dev
+```
 
 This will install local per-project Grunt to use within your project.
 
@@ -200,7 +228,7 @@ This sets up the Grunt module ready for including the grunt tasks inside the fun
 to include some Grunt modules that help us with the tasks. Install the following modules by typing the following at the 
 prompt:
 
-```
+```powershell
 npm install grunt-sass@2.1.0 --save-dev
 npm install time-grunt@1.4.0 --save-dev
 npm install jit-grunt@0.10.0 --save-dev
@@ -240,7 +268,9 @@ module.exports = function (grunt) {
 
 * Now you can run the grunt SASS task by typing the following at the prompt:
 
-`grunt css`
+```powershell
+grunt css
+```
 
 &nbsp;
 
@@ -250,7 +280,7 @@ module.exports = function (grunt) {
 files and automatically reload the browser when any of the watched files are updated. To do this, install the following 
 grunt modules:
 
-```
+```powershell
 npm install grunt-contrib-watch@1.0.0 --save-dev
 npm install grunt-browser-sync@2.2.0 --save-dev
 ```
@@ -284,13 +314,17 @@ npm install grunt-browser-sync@2.2.0 --save-dev
 
 * Then add the following task to the Grunt file:
 
-`  grunt.registerTask('default', ['browserSync', 'watch']);`
+```js
+  grunt.registerTask('default', ['browserSync', 'watch']);
+```
 
 * Now if you type the following at the command prompt, it will start the server, and open the web page in your default 
 browser. It will also keep a watch on the files in the css folder, and if you update any of them, it will compile the 
 scss file into css file and load the updated page into the browser (livereload)
 
-`grunt`
+```powershell
+grunt
+```
 
 &nbsp;
 
@@ -351,7 +385,9 @@ this, add the following code to *Gruntfile.js*. This should be added right after
 * Next we install the grunt-contrib-imagemin module and use it to process the images. To install this module type at the 
 prompt:
 
-`npm install grunt-contrib-imagemin@2.0.1 --save-dev`
+```powershell
+npm install grunt-contrib-imagemin@2.0.1 --save-dev
+```
 
 * Then, configure the imagemin task as shown below in the Gruntfile:
 
@@ -376,7 +412,7 @@ prompt:
 We are now going to use the Grunt *usemin* module together with concat, *cssmin*, *uglify* and *filerev* to prepare the 
 distribution folder. To do this, install the following Grunt modules:
 
-```
+```powershell
 npm install grunt-contrib-concat@1.0.1 --save-dev
 npm install grunt-contrib-cssmin@2.2.1 --save-dev
 npm install grunt-contrib-htmlmin@2.4.0 --save-dev
@@ -511,7 +547,9 @@ require('jit-grunt')(grunt, {
 * Now if you run Grunt, it will create a dist folder with the files structured correctly to be distributed to a server 
 to host your website. To do this, type the following at the prompt:
 
-`grunt build`
+```powershell
+grunt build
+```
 
 &nbsp;
 
@@ -527,14 +565,18 @@ to host your website. To do this, type the following at the prompt:
 
 * At the command prompt, type the following to install Gulp command-line interface (CLI) globally:
 
-`npm install -g gulp-cli@2.0.1`
+```powershell
+npm install -g gulp-cli@2.0.1
+```
 
 This will install the Gulp globally so that you can use it in all projects.
 
 * Next install Gulp to use within your project. To do this, go to the *conFusion* folder and type the following at the 
 prompt:
 
-`npm install gulp@3.9.1 --save-dev`
+```powershell
+npm install gulp@3.9.1 --save-dev
+```
 
 This will install local per-project Gulp to use within your project.
 
@@ -545,7 +587,9 @@ This will install local per-project Gulp to use within your project.
 * Install all the Gulp plugins that you will need for this exercise. To do this, type the following at the command 
 prompt:
 
-`npm install gulp-sass@3.1.0  browser-sync@2.23.6 --save-dev`
+```powershell
+npm install gulp-sass@3.1.0  browser-sync@2.23.6 --save-dev
+```
 
 &nbsp;
 
@@ -614,7 +658,9 @@ gulp.task('default', ['browser-sync'], function() {
 
 * At the command prompt, if you type gulp it will run the default task:
 
-`gulp`
+```powershell
+gulp
+```
 
 &nbsp;
 
@@ -623,7 +669,9 @@ gulp.task('default', ['browser-sync'], function() {
 * We will now create the tasks for copying the font files and cleaning up the distribution folder. To do this we will 
 first install the *del* Node module and require it in the Gulp file as follows:
 
-`npm install del@3.0.0 --save-dev`
+```powershell
+npm install del@3.0.0 --save-dev
+```
 
 ```js
 var ...
@@ -651,7 +699,9 @@ gulp.task('copyfonts', function() {
 * We will now install the *gulp-imagemin* plugin and configure the *imagemin* task. To do this we install the plugin and 
 require it as follows:
 
-`npm install gulp-imagemin@4.1.0 --save-dev`
+```powershell
+npm install gulp-imagemin@4.1.0 --save-dev
+```
 
 ```js
 var ...
@@ -676,7 +726,9 @@ gulp.task('imagemin', function() {
 
 * We now install the gulp-usemin and other related Gulp plugins and require them as follows:
 
-`npm install gulp-uglify gulp-usemin gulp-rev gulp-clean-css gulp-flatmap gulp-htmlmin --save-dev`
+```powershell
+npm install gulp-uglify gulp-usemin gulp-rev gulp-clean-css gulp-flatmap gulp-htmlmin --save-dev
+```
 
 ```js
 var ...
@@ -718,4 +770,6 @@ gulp.task('build',['clean'], function() {
 
 * At the command prompt, if you type *gulp build* it will run the build task:
 
-`gulp build`
+```powershell
+gulp build
+```

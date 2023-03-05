@@ -88,7 +88,7 @@ export const ConfigureStore = () => {
 }
 ```
 
-* Now we can safely delete the reducer.js file from the project.
+* Now we can safely delete the *reducer.js* file from the project.
 
 &nbsp;
 
@@ -147,7 +147,7 @@ export const Comments = (state = COMMENTS, action) => {
 
 * Now update *MainComponent.js* to make the action available for use within the DishdetailComponent as follows:
 
-```js
+```jsx
 . . .
 
 import { addComment } from '../redux/ActionCreators';
@@ -174,7 +174,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
 
 * Finally, update *DishdetailComponent.js* as follows to initiate the action upon the user submitting the comment form:
 
-```js
+```jsx
 . . .
 
   function RenderComments({comments, addComment, dishId}) {
@@ -216,7 +216,7 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Main));
 
 * Install Redux Thunk and Logger as shown below:
 
-```js
+```powershell
 yarn add redux-thunk@2.2.0
 yarn add redux-logger@3.0.6
 ```
@@ -288,7 +288,7 @@ export const addDishes = (dishes) => ({
 });
 ```
 
-* Next, open dishes.js and add the code to respond to actions as follows:
+* Next, open *dishes.js* and add the code to respond to actions as follows:
 
 ```js
 import * as ActionTypes from './ActionTypes';
@@ -314,7 +314,7 @@ export const Dishes = (state = { isLoading: true,
 
 * Add a new component named *LoadingComponent.js* to display a loading message as follows:
 
-```js
+```jsx
 import React from 'react';
 
 export const Loading = () => {
@@ -329,7 +329,7 @@ export const Loading = () => {
 
 * Now we will update the remaining components to use the actions. First, open *MainComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { addComment, fetchDishes } from '../redux/ActionCreators';
@@ -373,7 +373,7 @@ import { addComment, fetchDishes } from '../redux/ActionCreators';
 
 * Open *DishdetailComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { Loading } from './LoadingComponent';
@@ -406,7 +406,7 @@ import { Loading } from './LoadingComponent';
 
 * Open *HomeComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { Loading } from './LoadingComponent';
@@ -449,7 +449,7 @@ function RenderCard({item, isLoading, errMess}) {
 
 * Finally, update *MenuComponent.js* as follows:
 
-```js
+```jsx
 . . .
 
 import { Loading } from './LoadingComponent';
@@ -540,7 +540,7 @@ import { InitialFeedback } from './forms';
 
 * Next, open *MainComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { actions } from 'react-redux-form';
@@ -559,7 +559,7 @@ import { actions } from 'react-redux-form';
 
 * Open *CommentComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { Control, Form, Errors, actions } from 'react-redux-form';
@@ -599,7 +599,9 @@ import { Control, Form, Errors, actions } from 'react-redux-form';
 
 * json-server is a node module, and hence can be installed globally by typing the following at the command prompt:
 
-`npm install json-server -g`
+```powershell
+npm install json-server -g
+```
 
 If you are using OSX or Linux, use sudo at the front of the command. This will install json-server that can be started from the command line from any folder on your computer.
 
@@ -613,11 +615,13 @@ If you are using OSX or Linux, use sudo at the front of the command. This will i
 
 * Move to this folder in your terminal window, and type the following at the command prompt to start the server:
 
-`json-server --watch db.json -p 3001 -d 2000`
+```powershell
+json-server --watch db.json -p 3001 -d 2000
+```
 
 * This should start up a server at port number 3001 on your machine. The data from this server can be accessed by typing the following addresses into your **browser address bar**:
 
-```
+```powershell
 http://localhost:3001/dishes
 http://localhost:3001/promotions
 http://localhost:3001/leaders
@@ -628,7 +632,9 @@ http://localhost:3001/feedback
 
 * The json-server also provides a static web server. Any resources that you put in a folder named **public** in the **json-server** folder above, will be served by the server at the following address:
 
-`http://localhost:3001/`
+```powershell
+http://localhost:3001/
+```
 
 * Shut down the server by typing ctrl-C in the terminal window.
 
@@ -642,7 +648,9 @@ http://localhost:3001/feedback
 
 * Restart the json-server as we did before. Now your server will serve up the images for our React app. You can view these images by typing the following into your browser address bar:
 
-`http://localhost:3001/images/<image name>.png`
+```powershell
+http://localhost:3001/images/<image name>.png
+```
 
 &nbsp;
 
@@ -658,11 +666,15 @@ http://localhost:3001/feedback
 
 * As a first step, let us install Fetch into our project as follows:
 
-`yarn add cross-fetch@2.1.0`
+```powershell
+yarn add cross-fetch@2.1.0
+```
 
 * Now that we have installed Fetch, let us configure your application to connect to the server. First, create a file named *baseUrl.js* in the *shared* folder and add the following to it:
 
-`export const baseUrl = 'http://localhost:3001/';`
+```powershell
+export const baseUrl = 'http://localhost:3001/';
+```
 
 * Make sure that the json-server is running and serving up the data as illustrated in the previous exercise
 
@@ -678,7 +690,7 @@ export const ADD_PROMOS = 'ADD_PROMOS';
 export const PROMOS_FAILED = 'PROMOS_FAILED';
 ```
 
-* Then, open ActionCreators.js and update it as follows:
+* Then, open *ActionCreators.js* and update it as follows:
 
 ```js
 . . .
@@ -759,7 +771,7 @@ export const Comments = (state = { errMess: null, comments:[]}, action) => {
 };
 ```
 
-* Similarly, open promotions.js and update it as follows:
+* Similarly, open *promotions.js* and update it as follows:
 
 ```js
 import * as ActionTypes from './ActionTypes';
@@ -787,7 +799,7 @@ export const Promotions = (state  = { isLoading: true,
 
 * Open *MainComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { addComment, fetchDishes, fetchComments, fetchPromos } from '../redux/ActionCreators';
@@ -838,7 +850,7 @@ const mapDispatchToProps = dispatch => ({
 
 * Then, open *MenuComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { baseUrl } from '../shared/baseUrl';
@@ -852,7 +864,7 @@ import { baseUrl } from '../shared/baseUrl';
 
 * Then, open *HomeComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { baseUrl } from '../shared/baseUrl';
@@ -870,7 +882,7 @@ import { baseUrl } from '../shared/baseUrl';
 
 * Then, open *DishdetailComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { baseUrl } from '../shared/baseUrl';
@@ -894,7 +906,7 @@ import { baseUrl } from '../shared/baseUrl';
 
 ##### **Handling Errors**
 
-* Open ActionCreators.js and update it as follows:
+* Open *ActionCreators.js* and update it as follows:
 
 ```js
 . . .
@@ -984,7 +996,7 @@ export const fetchPromos = () => (dispatch) => {
 
 ##### **Posting a Comment**
 
-* Open ActionCreators.js and update it as follows:
+* Open *ActionCreators.js* and update it as follows:
 
 ```js
 . . .
@@ -1045,7 +1057,7 @@ Open *comment.js* and **remove** the following two lines from it:
 
 * Open *MainComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { postComment, fetchDishes, fetchComments, fetchPromos } from '../redux/ActionCreators';
@@ -1063,7 +1075,7 @@ import { postComment, fetchDishes, fetchComments, fetchPromos } from '../redux/A
 
 * Finally, open *DishdetailComponent.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
   function RenderComments({comments, postComment, dishId}) {
@@ -1097,11 +1109,13 @@ import { postComment, fetchDishes, fetchComments, fetchPromos } from '../redux/A
 
 * Install react-transition-group in your React project as follows:
 
-`yarn add react-transition-group@2.3.0`
+```powershell
+yarn add react-transition-group@2.3.0
+```
 
 * Configure CSS classes for use in animation. Open *App.css* and add the following classes:
 
-```js
+```css
 . . .
 
 .page-enter {
@@ -1130,7 +1144,7 @@ import { postComment, fetchDishes, fetchComments, fetchPromos } from '../redux/A
 
 Then, open *MainComponent.js* and add in the following to configure the animation:
 
-```js
+```jsx
 . . .
 
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -1169,7 +1183,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 * Install react-animation-components into your React app as follows:
 
-```
+```powershell
 yarn add react-animation-components@3.0.0
 yarn add prop-types@15.6.0
 ```
@@ -1180,7 +1194,7 @@ yarn add prop-types@15.6.0
 
 * Open *HomeComponents.js* and update as follows:
 
-```js
+```jsx
 . . .
 
 import { FadeTransform } from 'react-animation-components';
@@ -1207,7 +1221,7 @@ import { FadeTransform } from 'react-animation-components';
 
 * Open *DishdetailComponents.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 import { FadeTransform, Fade, Stagger } from 'react-animation-components';

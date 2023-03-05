@@ -25,7 +25,7 @@ class Header extends Component {
     const insideStyles = {
       background: "rgba(0, 0, 0, 0.2)",
       borderRadius: 150,
-      padding: 55,
+      padding: 35,
       position: "absolute",
       top: "50%",
       left: "50%",
@@ -39,7 +39,7 @@ class Header extends Component {
           <div className="container text-white">
             <div className="row" style={insideStyles}>
               <h2>G-Town.github.io</h2>
-              <div className="row mt-5">
+              <div className="row mt-3">
                 <p>Repository of Projects & Learning in Data Science & Web Dev.<br />
                   *Work In Progress*</p>
               </div>
@@ -52,7 +52,7 @@ class Header extends Component {
             {/* <NavbarBrand className="col-1">
               <img src={process.env.PUBLIC_URL + '/logo192.png'} height="40" width="40" alt='Logo Here' />
             </NavbarBrand> */}
-            <NavbarToggler classname="" onClick={this.toggleNav} />
+            <NavbarToggler className="" onClick={this.toggleNav} />
             <Collapse className="row px-5" isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
                 <IconContext.Provider value={{ className: "shared-icon" }}>

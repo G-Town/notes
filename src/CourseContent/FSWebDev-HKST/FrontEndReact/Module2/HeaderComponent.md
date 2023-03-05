@@ -1,4 +1,4 @@
-```js
+```jsx
 import React, { Component } from 'react';
 import {
   Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron,

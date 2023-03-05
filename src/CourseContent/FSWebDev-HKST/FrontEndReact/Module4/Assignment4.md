@@ -24,6 +24,8 @@ appropriately.
 
 ![Task 1](FSWebDev-HKST/FrontEndReact/Module4/task1.png)
 
+&nbsp;
+
 #### **Task 2**
 
 In this task, you will enable the saving of the feedback data submitted using the feedback form in the Contact 
@@ -39,6 +41,8 @@ on the json-server.
 data.
 
 ![Task 2](FSWebDev-HKST/FrontEndReact/Module4/task2.png)
+
+&nbsp;
 
 #### **Task 3**
 

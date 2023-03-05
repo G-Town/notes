@@ -14,7 +14,7 @@
 
 * You will start out by importing the necessary components from reactstrap into *ContactComponent.js* as follows:
 
-```js
+```jsx
 . . .
 
 import React, { Component } from 'react';
@@ -26,7 +26,7 @@ import { Breadcrumb, BreadcrumbItem,
 
 * You will then change the *ContactComponent* to a class-based component as follows:
 
-```js
+```jsx
 . . .
 
 class Contact extends Component {
@@ -46,7 +46,7 @@ class Contact extends Component {
 
 * Update the *ContactComponent.js* file as follows to set up the Controlled Form:
 
-```js
+```jsx
 . . .
 
   constructor(props) {
@@ -89,7 +89,7 @@ class Contact extends Component {
 
 * Then add the controlled form to it as follows:
 
-```js
+```jsx
 . . .
 
         <div className="row row-content">
@@ -192,7 +192,7 @@ class Contact extends Component {
 
 * Open *ContactComponent.js* and update it as follows to introduce the support to track form errors and perform validation:
 
-```js
+```jsx
 . . .
 import { Breadcrumb, BreadcrumbItem, Button, Form, FormGroup, Label, Input, Col, Row, FormFeedback } from 'reactstrap';
 . . .
@@ -270,7 +270,7 @@ class Contact extends Component {
 
 * Now that we have introduced some functions that can be used for form validation, let us update the form itself to make use of these as follows:
 
-```js
+```jsx
 . . .
 
               <FormGroup row>
@@ -345,7 +345,7 @@ class Contact extends Component {
 
 * Update *HeaderComponent.js* as follows to add a new Modal to the application to host the form:
 
-```js
+```jsx
 . . .
 
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
@@ -386,7 +386,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 
 * Then, add a button to the Navbar to enable toggling the modal:
 
-```js
+```jsx
 . . .
 
               <Nav className="ml-auto" navbar>
@@ -404,7 +404,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 
 * Add the form to the modal body as shown below:
 
-```js
+```jsx
 . . .
 
             <Form onSubmit={this.handleLogin}>
@@ -433,7 +433,7 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 
 * Then, add the following function to the class to handle the form submission:
 
-```js
+```jsx
 . . .
 
     this.handleLogin = this.handleLogin.bind(this);
@@ -464,14 +464,14 @@ import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron,
 
 * As a first step you will install Redux and React-Redux into your application as follows:
 
-```
+```powershell
 yarn add redux@3.7.2
 yarn add react-redux@5.0.7
 ```
 
 * Next, create a folder named *redux* in the *src* folder and then add a file named *reducer.js* with the code below:
 
-```js
+```jsx
 import { DISHES } from '../shared/dishes';
 import { COMMENTS } from '../shared/comments';
 import { PROMOTIONS } from '../shared/promotions';
@@ -491,7 +491,7 @@ export const Reducer = (state = initialState, action) => {
 
 * Then, add a file named *configureStore.js* in the *redux* folder and add the following code to it:
 
-```js
+```jsx
 import {createStore} from 'redux';
 import { Reducer, initialState } from './reducer'
 
@@ -507,7 +507,7 @@ export const ConfigureStore = () => {
 
 * Next, open *App.js* and update it as follows:
 
-```js
+```jsx
 . . .
 
 
@@ -532,7 +532,7 @@ const store = ConfigureStore();
 
 * Finally, update *MainComponent.js* to connect it to Redux store and use it:
 
-```js
+```jsx
 . . .
 
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom'
@@ -603,11 +603,13 @@ export default withRouter(connect(mapStateToProps)(Main));
 
 * We first install the *react-redux-form* into our project as follows:
 
-`yarn add react-redux-form@1.16.8`
+```powershell
+yarn add react-redux-form@1.16.8
+```
 
 * Then open *ContactComponent.js* and update the Feedback Form to use react-redux-form:
 
-```js
+```jsx
 . . .
 
 import { Breadcrumb, BreadcrumbItem,
@@ -710,7 +712,7 @@ import { Control, LocalForm, Errors } from 'react-redux-form';
 
 * Open *ContactComponent.js* and update it as follows to implement form validation:
 
-```js
+```jsx
 . . . 
 
 

@@ -1,4 +1,4 @@
-```js
+```jsx
 import React, { Component } from 'react';
 import Home from './HomeComponent';
 import Menu from './MenuComponent';

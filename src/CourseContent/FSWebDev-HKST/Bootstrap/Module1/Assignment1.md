@@ -12,6 +12,8 @@ In this task you will be updating the *aboutus.html* page to make use of the Boo
 
 * Update the page to make use of all the Bootstrap JS components.
 
+&nbsp;
+
 #### **Task 2**
 
 In this task you will be adding appropriate formatting to the web page contents using container, row and column classes 
@@ -25,6 +27,8 @@ on the right side for more content to be added later. The content should be stac
 * The "Corporate Leadership" section should stretch the entire width of the row.
 
 ![Normal](FSWebDev-HKST/Bootstrap/Module1/normal.png?raw=true)
+
+&nbsp;
 
 #### **Task 3**
 

@@ -12,8 +12,8 @@
 
 ##### **Adding the Carousel Control Buttons**
 
-* We will introduce two new buttons into the carousel component that we already included in the index.html page. To add 
-the two buttons to the carousel, add the following code to the end of the carousel:
+* We will introduce two new buttons into the carousel component that we already included in the *index.html* page. 
+To add the two buttons to the carousel, add the following code to the end of the carousel:
 
 ```html
         <div class="btn-group" id="carouselButton">
@@ -33,7 +33,7 @@ play glyphicons to indicate their corresponding actions.
 
 ##### **Adding CSS Class for the Buttons**
 
-* Next, we add the following CSS class to styles.css file to position the buttons at the bottom-right corner of the 
+* Next, we add the following CSS class to *styles.css* file to position the buttons at the bottom-right corner of the 
 carousel:
 
 ```css
@@ -77,9 +77,9 @@ carousel:
 
 ##### **Modifying the Carousel Control Buttons**
 
-* We will modify the carousel control buttons in the carousel component that we already included in the index.html page. 
-Instead of two buttons, we will use a single button that will indicate if the carousel is currently cycling or paused. 
-Furthermore we can use the button to toggle the carousel cycling behavior:
+* We will modify the carousel control buttons in the carousel component that we already included in the *index.html* 
+page. Instead of two buttons, we will use a single button that will indicate if the carousel is currently cycling or 
+paused. Furthermore we can use the button to toggle the carousel cycling behavior:
 
 ```html
           <button class="btn btn-danger btn-sm" id="carouselButton">
@@ -96,7 +96,7 @@ or play button based on the current behavior of the carousel.
 
 * Finally we modify the JavaScript code to control the behavior of the carousel and also show the appropriate button:
 
-```javascript
+```js
       $("#carouselButton").click(function(){
         if ($("#carouselButton").children("span").hasClass('fa-pause')) {
           $("#mycarousel").carousel('pause');
@@ -128,7 +128,7 @@ We will add the Less code into this file.
 
 * Add the following Less variables into the file:
 
-```less
+```css
 @lt-gray: #ddd;
 @background-dark: #512DA8;
 @background-light: #9575CD;
@@ -145,7 +145,7 @@ We have just added a few color and a height variable. We will make use of these 
 
 * Next we add a mixin into the file as follows:
 
-```less
+```css
 .zero-margin (@pad-up-dn: 0px, @pad-left-right: 0px) {
 	margin:0px auto;
 	padding: @pad-up-dn @pad-left-right;
@@ -156,7 +156,7 @@ We will make use of this to define several row classes next.
 
 * Using the variables and Mixin class that we defined earlier, add the following row classes to the file:
 
-```less
+```css
 .row-header{
   .zero-margin();
 }
@@ -209,7 +209,7 @@ Note the use of the variables and the mixin with various parameters in defining 
 
 * Next we add a carousel class to illustrate the use of nesting of classes in Less, as follows:
 
-```less
+```css
 .carousel {
   background:@background-dark;
 
@@ -239,7 +239,9 @@ Note the use of the variables and the mixin with various parameters in defining 
 * Now we install the node module to support the compilation of the Less file. To do this, type the following at the 
 command prompt:
 
-`npm install -g less@2.7.2`
+```powershell
+npm install -g less@2.7.2
+```
 
 This will install the *less* NPM module globally so that it can be used by any project. **Note: if you are executing 
 this on a Mac or Linux machine, you may need to add "sudo" to the beginning of this command**. This will make available 
@@ -251,7 +253,9 @@ the Less file.
 
 * Next type the following at the command prompt to compile the Less file into a CSS file:
 
-`lessc styles.less styles.css`
+```powershell
+lessc styles.less styles.css
+```
 
 &nbsp;
 
@@ -270,7 +274,7 @@ will add the Scss code into this file.
 
 * Add the following Scss variables into the file:
 
-```scss
+```css
 $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
@@ -288,7 +292,7 @@ We have just added a few color and a height variable. We will make use of these 
 
 * Next we add a mixin into the file as follows:
 
-```scss
+```css
 @mixin zero-margin($pad-up-dn, $pad-left-right) {
 	margin:0px auto;
 	padding: $pad-up-dn $pad-left-right;
@@ -299,7 +303,7 @@ We will make use of this to define several row classes next.
 
 * Using the variables and Mixin class that we defined earlier, add the following row classes to the file:
 
-```scss
+```css
 .row-header{
   @include zero-margin(0px,0px);
 }
@@ -352,7 +356,7 @@ Note the use of the variables and the mixin with various parameters in defining 
 
 * Next we add a carousel class to illustrate the use of nesting of classes in Scss, as follows:
 
-```scss
+```css
 .carousel {
   background:$background-dark;
 
@@ -382,7 +386,9 @@ Note the use of the variables and the mixin with various parameters in defining 
 * Now we install the node module to support the compilation of the Scss file to a CSS file. To do this, type the 
 following at the command prompt:
 
-`npm install --save-dev node-sass@4.7.2`
+```powershell
+npm install --save-dev node-sass@4.7.2
+```
 
 This will install the *node-sass* NPM module into your project and also add it as a development dependency in your 
 *package.json* file.
@@ -390,8 +396,12 @@ This will install the *node-sass* NPM module into your project and also add it a
 * Next open your package.json file and add the following line into the scripts object there. This adds a script to 
 enable the compilation of the Scss file into a CSS file:
 
-`    "scss": "node-sass -o css/ css/"`
+```css
+    "scss": "node-sass -o css/ css/"
+```
 
 * In order to transform the Scss file to a CSS file, type the following at the prompt:
 
-`npm run scss`
+```powershell
+npm run scss
+```

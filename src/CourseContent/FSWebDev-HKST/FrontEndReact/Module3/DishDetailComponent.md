@@ -1,4 +1,4 @@
-```js
+```jsx
 import React, { Component } from 'react';
 import {
   Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem, Modal, Button,
