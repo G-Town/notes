@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[1525],{1525:function(e,n,s){e.exports=s.p+"static/media/MainComponent.7ef80f04314ba4851ab6.md"}}]);

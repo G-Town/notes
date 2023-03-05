@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[9449],{39449:function(e,s,t){e.exports=t.p+"static/media/Mod3Reading.56f964834fb5c4eda108"}}]);

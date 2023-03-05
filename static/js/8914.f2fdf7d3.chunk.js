@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[8914],{18914:function(e,n,t){t.r(n),t.d(n,{DSUM_READING:function(){return a}});var a=[{id:0,subject:"Applied Data Science",course:"Intro to Data Science",module:"Fundmentals of Data Manipulation",title:"Reading: 50 Years of Data Science",url:"/notes/CourseContent/ApplDataSci-UMich/Intro/Module1/50YearsDataScience.pdf",image:"/notes/images/green1.jpg"}]}}]);
-//# sourceMappingURL=8914.f2fdf7d3.chunk.js.map
