@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[3773],{43773:function(e,s,t){e.exports=t.p+"static/media/KDtreesExample.013ef5893c72cbf88f70.md"}}]);

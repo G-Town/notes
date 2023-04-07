@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[4989],{54989:function(e,s,t){e.exports=t.p+"static/media/Resources&Reading.d6462bda0ef289ae1012.md"}}]);

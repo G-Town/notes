@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[701],{70701:function(e,t,s){e.exports=s.p+"static/media/DetectCancer.2781edd64341d922ad2a.md"}}]);

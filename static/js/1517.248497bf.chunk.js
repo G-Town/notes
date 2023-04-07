@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[1517],{41517:function(e,s,t){e.exports=t.p+"static/media/Tools.2595bea3c4c775081124.md"}}]);

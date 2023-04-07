@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[6989],{96989:function(s,e,t){s.exports=t.p+"static/media/Goodhart'sLaw.47883579cd3108644dca.md"}}]);

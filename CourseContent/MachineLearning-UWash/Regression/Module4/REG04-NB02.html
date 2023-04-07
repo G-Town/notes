@@ -14579,7 +14579,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Regression-Week-4:-Ridge-Regression-(gradient-descent)">Regression Week 4: Ridge Regression (Gradient Descent)<a class="anchor-link" href="#Regression-Week-4:-Ridge-Regression-(gradient-descent)">&#182;</a></h1>
+<h1 id="Regression-Week-4:-Ridge-Regression-(gradient-descent)">Regression Module 4: Ridge Regression (Gradient Descent)<a class="anchor-link" href="#Regression-Week-4:-Ridge-Regression-(gradient-descent)">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14674,7 +14674,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>If we want to do any "feature engineering" like creating new features or adjusting existing ones we should do this directly using the SFrames as seen in the first notebook of Week 2. For this notebook, however, we will work with the existing features.</p>
+<p>If we want to do any "feature engineering" like creating new features or adjusting existing ones we should do this directly using the SFrames as seen in the first notebook of Module 2. For this notebook, however, we will work with the existing features.</p>
 
 </div>
 </div>
@@ -14697,7 +14697,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>As in Week 2, we convert the SFrame into a 2D Numpy array. Copy and paste <code>get_numpy_data()</code> from the second notebook of Week 2.</p>
+<p>As in Module 2, we convert the SFrame into a 2D Numpy array. Copy and paste <code>get_numpy_data()</code> from the second notebook of Module 2.</p>
 
 </div>
 </div>
@@ -14804,7 +14804,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <pre><code>Cost(w)
 = SUM[ (prediction - output)^2 ]
 + l2_penalty*(w[0]^2 + w[1]^2 + ... + w[k]^2).</code></pre>
-<p>Since the derivative of a sum is the sum of the derivatives, we can take the derivative of the first part (the RSS) as we did in the notebook for the unregularized case in Week 2 and add the derivative of the regularization part.  As we saw, the derivative of the RSS with respect to <code>w[i]</code> can be written as:</p>
+<p>Since the derivative of a sum is the sum of the derivatives, we can take the derivative of the first part (the RSS) as we did in the notebook for the unregularized case in Module 2 and add the derivative of the regularization part.  As we saw, the derivative of the RSS with respect to <code>w[i]</code> can be written as:</p>
 
 <pre><code>2*SUM[ error*[feature_i] ].</code></pre>
 <p>The derivative of the regularization term with respect to <code>w[i]</code> is:</p>
@@ -14930,7 +14930,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Now we will write a function that performs a gradient descent. The basic premise is simple. Given a starting point we update the current weights by moving in the negative gradient direction. Recall that the gradient is the direction of <em>increase</em> and therefore the negative gradient is the direction of <em>decrease</em> and we're trying to <em>minimize</em> a cost function.</p>
-<p>The amount by which we move in the negative gradient <em>direction</em>  is called the 'step size'. We stop when we are 'sufficiently close' to the optimum. Unlike in Week 2, this time we will set a <strong>maximum number of iterations</strong> and take gradient steps until we reach this maximum number. If no maximum number is supplied, the maximum should be set 100 by default. (Use default parameter values in Python.)</p>
+<p>The amount by which we move in the negative gradient <em>direction</em>  is called the 'step size'. We stop when we are 'sufficiently close' to the optimum. Unlike in Module 2, this time we will set a <strong>maximum number of iterations</strong> and take gradient steps until we reach this maximum number. If no maximum number is supplied, the maximum should be set 100 by default. (Use default parameter values in Python.)</p>
 <p>With this in mind, complete the following gradient descent function below using your derivative function above. For each step in the gradient descent, we update the weight for each feature before computing our stopping criteria.</p>
 
 </div>

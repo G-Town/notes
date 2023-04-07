@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[1362],{71362:function(e,s,a){e.exports=a.p+"static/media/ClosedFormExample.a4ac02af9e527ffa5766.md"}}]);

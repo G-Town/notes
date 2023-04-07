@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[4045],{24045:function(t,e,s){t.exports=s.p+"static/media/GettingStarted.b3b1a44c5d5935277a04.md"}}]);

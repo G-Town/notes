@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[2637],{52637:function(e,s,t){e.exports=t.p+"static/media/SpuriousCorrelations.4418f43a51e67373e5ab.md"}}]);

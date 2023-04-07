@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[924],{20924:function(e,t,s){e.exports=s.p+"static/media/matplotlib.9861b8055df8b9e044f3.md"}}]);

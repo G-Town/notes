@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[2616],{42616:function(e,a,s){e.exports=s.p+"static/media/GradientDescentExample.97fb4eaa658baeba62fe.md"}}]);

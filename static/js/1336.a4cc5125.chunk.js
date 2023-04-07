@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunknotes=self.webpackChunknotes||[]).push([[1336],{21336:function(e,s,n){e.exports=n.p+"static/media/ScienceIsn'tBroken.3d47952e4d6404dd8b76.md"}}]);
