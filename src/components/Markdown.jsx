@@ -8,13 +8,18 @@ import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/jsx';
 import powershell from 'react-syntax-highlighter/dist/esm/languages/prism/powershell';
+import python from 'react-syntax-highlighter/dist/esm/languages/prism/python'
 
-import { atomDark } from    'react-syntax-highlighter/dist/esm/styles/prism';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 import rehypeRaw from 'rehype-raw';
 import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
+import 'katex/dist/katex.min.css';
 
 // SyntaxHighlighter.registerLanguage('markdown', markdown);
 // SyntaxHighlighter.registerLanguage('javascript', javascript);
@@ -22,6 +27,7 @@ import remarkGfm from 'remark-gfm';
 
 SyntaxHighlighter.registerLanguage('jsx', jsx);
 SyntaxHighlighter.registerLanguage('powershell', powershell);
+SyntaxHighlighter.registerLanguage('python', python);
 
 function Markdown(props) {
   // const codeString=props.frames.find(page => page.id === props.id).url
@@ -57,8 +63,8 @@ function Markdown(props) {
         <div className="row">
           <ReactMarkdown
             // children={post}
-            rehypePlugins={[rehypeRaw]}
-            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw, rehypeKatex]}
+            remarkPlugins={[remarkGfm, remarkMath]}
             // components={codeBlock}
             components={{
               img: function ({ node, ...props }) {

@@ -35,7 +35,7 @@ class Header extends Component {
       <Parallax strength={200}>
         <Background className="bg-home-image">
         </Background>
-        <div style={{ height: 400 }}>
+        <div style={{ height: 300 }}>
           <div className="container text-white">
             <div className="row" style={insideStyles}>
               <h2>G-Town.github.io</h2>

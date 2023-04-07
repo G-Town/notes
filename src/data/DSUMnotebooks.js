@@ -374,9 +374,9 @@ export const DSUM_NOTEBOOKS = [
     id: 40,
     subject: "Applied Data Science",
     course: "Applied Machine Learning",
-    module: "Supervised Machine Learning II",
+    module: "Unsupervised Machine Learning",
     title: "Unsupervised Learning",
-    url: process.env.PUBLIC_URL + "/CourseContent/ApplDataSci-UMich/AppliedML/Module4/UnsupervisedLearning.html",
+    url: process.env.PUBLIC_URL + "/CourseContent/ApplDataSci-UMich/AppliedML/Module5/UnsupervisedLearning.html",
     image: process.env.PUBLIC_URL + "/images/red/1533425568172.jpg"
   },
   {

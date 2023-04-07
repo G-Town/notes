@@ -6,7 +6,7 @@ export const MLUW_NOTEBOOKS = [
     module: "Welcome",
     title: "Getting Started with Jupyter Notebook",
     url: process.env.PUBLIC_URL +
-    "/CourseContent/MachineLearning-UWash/Foundations/Module1/GettingStartedWithJupyterNotebook.html",
+      "/CourseContent/MachineLearning-UWash/Foundations/Module1/GettingStartedWithJupyterNotebook.html",
     image: process.env.PUBLIC_URL + "/images/blue/1673247260220927.jpg"
   },
   {
@@ -14,9 +14,9 @@ export const MLUW_NOTEBOOKS = [
     subject: "Machine Learning",
     course: "ML Foundations: Case Studies",
     module: "Welcome",
-    title: "Turi: Getting Started with Sframes",
+    title: "Getting Started with Sframes",
     url: process.env.PUBLIC_URL +
-    "/CourseContent/MachineLearning-UWash/Foundations/Module1/TuriGettingStartedWithSframes.html",
+      "/CourseContent/MachineLearning-UWash/Foundations/Module1/TuriGettingStartedWithSframes.html",
     image: process.env.PUBLIC_URL + "/images/blue/1673247260220927.jpg"
   },
   {
@@ -79,7 +79,7 @@ export const MLUW_NOTEBOOKS = [
     course: "Regression",
     module: "Simple Linear Regression",
     title: "Philly Crime",
-    url: process.env.PUBLIC_URL + "/CourseContent/MachineLearning-UWash/Regression/Module1/REG01-NB01.html",
+    url: process.env.PUBLIC_URL + "/CourseContent/MachineLearning-UWash/Regression/Module1/PhillyCrime.html",
     image: process.env.PUBLIC_URL + "/images/blue/1670318601416040.jpg"
   },
   {
@@ -88,7 +88,7 @@ export const MLUW_NOTEBOOKS = [
     course: "Regression",
     module: "Simple Linear Regression",
     title: "Simple Linear Regression",
-    url: process.env.PUBLIC_URL + "/CourseContent/MachineLearning-UWash/Regression/Module1/PhillyCrime.html",
+    url: process.env.PUBLIC_URL + "/CourseContent/MachineLearning-UWash/Regression/Module1/REG01-NB01.html",
     image: process.env.PUBLIC_URL + "/images/blue/1670318601416040.jpg"
   },
   {
@@ -134,7 +134,7 @@ export const MLUW_NOTEBOOKS = [
     module: "Ridge Regression",
     title: "Overfitting Demo",
     url: process.env.PUBLIC_URL +
-         "/CourseContent/MachineLearning-UWash/Regression/Module4/Overfitting_Demo_Ridge_Lasso.html",
+      "/CourseContent/MachineLearning-UWash/Regression/Module4/Overfitting_Demo_Ridge_Lasso.html",
     image: process.env.PUBLIC_URL + "/images/blue/1670318601416040.jpg"
   },
   {
@@ -162,7 +162,7 @@ export const MLUW_NOTEBOOKS = [
     module: "Feature Selection & Lasso",
     title: "Overfitting Demo",
     url: process.env.PUBLIC_URL +
-         "/CourseContent/MachineLearning-UWash/Regression/Module5/Overfitting_Demo_Ridge_Lasso.html",
+      "/CourseContent/MachineLearning-UWash/Regression/Module5/Overfitting_Demo_Ridge_Lasso.html",
     image: process.env.PUBLIC_URL + "/images/blue/1670318601416040.jpg"
   },
   {
@@ -340,7 +340,7 @@ export const MLUW_NOTEBOOKS = [
     id: 37,
     subject: "Machine Learning",
     course: "Clustering & Retrieval",
-    module: "Hierarchical Clustering & Closing Remarks",
+    module: "Hierarchical Clustering",
     title: "Hierarchical Clustering",
     url: process.env.PUBLIC_URL + "/CourseContent/MachineLearning-UWash/Clustering&Retrieval/Module6/CLU06-NB01.html",
     image: process.env.PUBLIC_URL + "/images/blue/160-1603163_qr-code-nature-hd-wallpapers-blue.jpg"

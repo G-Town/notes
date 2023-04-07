@@ -4,7 +4,7 @@ import { Routes, Route, Navigate, useParams } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import { actions } from 'react-redux-form';
 // import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import Header from './Header'
+// import Header from './Header';
 import Home from './Home';
 // import List from './List';
 import About from './About';
@@ -67,6 +67,7 @@ function Main(props) {
         docs={props.DSUMdocs}
         title={useParams().docTitle}
         crumb={["/ApplDataSci-UMich", "DataSci"]}
+        scale={1.25}
       />);
   }
   const DSUM_Markdown = () => {
@@ -90,6 +91,16 @@ function Main(props) {
       <Doc
         docs={props.MLUWdocs}
         title={useParams().docTitle}
+        crumb={["/MachineLearning-UWash", "MachineLearning"]}
+        scale={1}
+      />);
+  }
+  const MLUW_Markdown = () => {
+    return (
+      <Markdown
+        frames={props.MLUWdocs}
+        id={parseInt(useParams().docId, 10)}
+        crumb={["/MachineLearning-UWash", "MachineLearning"]}
       />);
   }
   const WDHK_Markdown = () => {
@@ -119,10 +130,10 @@ function Main(props) {
 
   return (
     <div className="font-link">
-      <Header />
+      {/* <Header /> */}
       {/* <Sidebar /> */}
       <Routes>
-        <Route exact path="/home" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
         {/* <Route path="/list" element={<List />} /> */}
         <Route path="/about" element={<About />} />
 
@@ -137,6 +148,8 @@ function Main(props) {
         <Route path="/MachineLearning-UWash"
           element={<MachineLearning notebooks={props.MLUWnotebooks} docs={props.MLUWdocs} />} />
         <Route path="MachineLearning-UWash/:notebookId" element={<MLUW_Notebook />} />
+        <Route path="MachineLearning-UWash/document/:docTitle" element={<MLUW_Doc />} />
+        <Route path="MachineLearning-UWash/page/:docId" element={<MLUW_Markdown />} />
 
         <Route path="/FSWebDev-HKST"
           element={<WebDev pages={props.WDHKmarkdown} docs={props.WDHKdocs} />}

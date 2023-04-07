@@ -24,7 +24,7 @@ function RenderNotebook({ notebook }) {
 function RenderDoc({ doc }) {
   return (
     <Card style={{ width: '15rem' }} className="bg-dark">
-      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/red/1663565113444029.jpg"} />
+      <CardImg height='160' src={doc.image} />
       <CardBody className="text-light">
         <CardTitle>{doc.title}</CardTitle>
         <CardSubtitle></CardSubtitle>
@@ -38,7 +38,7 @@ function RenderDoc({ doc }) {
 function RenderMD({ doc }) {
   return (
     <Card style={{ width: '15rem' }} className="bg-dark">
-      <CardImg height='160' src={process.env.PUBLIC_URL + "/images/red/1663565113444029.jpg"} />
+      <CardImg height='160' src={doc.image} />
       <CardBody className="text-light">
         <CardTitle>{doc.title}</CardTitle>
         <CardSubtitle></CardSubtitle>
@@ -176,6 +176,11 @@ class DataSci extends Component {
             </div>
             <div className="row pb-5">
               <h4>Module 3 - More Data Processing</h4>
+
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 3)} />
+              </div>
+
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 13)} />
               </div>
@@ -200,6 +205,17 @@ class DataSci extends Component {
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Answering Questions with Messy Data</h4>
+
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 4)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 5)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 6)} />
+              </div>
+
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 20)} />
               </div>
@@ -226,11 +242,28 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 1 - Principles of Information Visualization</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
-                <p>placeholder for reading material and module pdf notes</p>
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 7)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: Useful Junk")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc =>
+                  doc.title === "Reading: Graphics Lies, Misleading Visuals")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Assignment 1")} />
               </div>
             </div>
             <div className="row pb-5">
               <h4>Module 2 - Basic Charting</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 11)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc =>
+                  doc.title === "Reading: Ten Simple Rules for Better Figures")} />
+              </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 22)} />
               </div>
@@ -244,6 +277,14 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 3 - Charting Fundamentals</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc =>
+                  doc.title === "Reading: Selecting the Number of Bins in a Histogram")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc =>
+                  doc.title === "Reading: Sample-Oriented Task-Driven Visualizations")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 25)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
@@ -252,9 +293,15 @@ class DataSci extends Component {
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 27)} />
               </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 15)} />
+              </div>
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Applied Visualizations</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 16)} />
+              </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 28)} />
               </div>
@@ -288,6 +335,10 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 1 - Fundamentals of Machine Learning</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc =>
+                  doc.title === "Reading: A Few Useful Things to Know About Machine Learning")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 31)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
@@ -296,6 +347,10 @@ class DataSci extends Component {
             </div>
             <div className="row pb-5">
               <h4>Module 2 - Supervised Machine Learning</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc =>
+                  doc.title === "Reading: Genetic Test for Autism Refuted")} />
+              </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 33)} />
               </div>
@@ -309,6 +364,10 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 3 - Evaluation</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc =>
+                  doc.title === "Reading: Practical Guide to Controlled Experiments on the Web")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 36)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
@@ -318,10 +377,42 @@ class DataSci extends Component {
             <div className="row pb-5">
               <h4>Module 4 - Supervised Machine Learning II</h4>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 21)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 22)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 23)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 24)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 25)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: Leakage in Data Mining")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 27)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: Rules of Machine Learning")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 38)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 39)} />
+              </div>
+            </div><div className="row pb-5">
+              <h4>Module 5 - Unsupervised Machine Learning</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 29)} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 30)} />
               </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 40)} />
@@ -345,6 +436,9 @@ class DataSci extends Component {
           <Collapse isOpen={this.state.isMod4Open}>
             <div className="row pb-5">
               <h4>Module 1 - Working with Text</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 31)} />
+              </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 41)} />
               </div>
@@ -375,6 +469,12 @@ class DataSci extends Component {
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Topic Modeling</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: Latent Dirichlet Allocation")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderMD doc={this.props.docs.find(doc => doc.id === 33)} />
+              </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 48)} />
               </div>
@@ -422,6 +522,15 @@ class DataSci extends Component {
             </div>
             <div className="row pb-5">
               <h4>Module 4 - Network Evolution</h4>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: Power Laws and Rich-Get-Richer Phenomena")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: Graphs")} />
+              </div>
+              <div className="col-12 col-md my-3 d-flex justify-content-center">
+                <RenderDoc doc={this.props.docs.find(doc => doc.title === "Reading: The Small-World Phenomenon")} />
+              </div>
               <div className="col-12 col-md my-3 d-flex justify-content-center">
                 <RenderNotebook notebook={this.props.notebooks.find(notebook => notebook.id === 55)} />
               </div>

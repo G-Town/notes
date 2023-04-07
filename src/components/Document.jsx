@@ -10,7 +10,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function Doc(props) {
 
-  const file_url = props.docs.find(doc => doc.title === props.title).url;
+  const doc = props.docs.find(doc => doc.title === props.title)
+  const file_url = doc.url;
   const [post, setPost] = useState('');
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
@@ -65,10 +66,10 @@ function Doc(props) {
       </div>
 
       <div className="container box text-white text-start justify-items-center p-5">
-
-
+        <h2>{doc.title}</h2>
+        <br />
         <Document file={post} onLoadSuccess={onDocumentLoadSuccess} className="">
-          <Page pageNumber={pageNumber} scale={1.25}
+          <Page pageNumber={pageNumber} scale={props.scale}
             renderTextLayer={false} renderAnnotationLayer={false}
             className=""
           // height={document.getElementsByClassName('PdfDiv')[0]?.clientHeight*0.8 ?? 150}
